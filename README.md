@@ -1,4 +1,4 @@
-# purpletech-soen341projectF2023
+# purpletech-App
 Real estate software project created by the purpletech company
 
 ## Team Members
