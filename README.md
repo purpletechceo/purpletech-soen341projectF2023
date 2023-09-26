@@ -8,12 +8,10 @@ The real estate web app facilitates buying, selling, and renting properties, off
 
 ### Users
 - **Homebuyers:** Search properties based on criteria, calculate payments, and connect with brokers.
+- **Brokers:** manage property listings and can make purchase offers on other listings.
 - **Property Renters:** Similar search capabilities, request property visits.
 - **System Administrators:** Manage broker activities.
-
-### Brokers
-Brokers manage property listings and can make purchase offers on other listings.
-
+  
 ## User Guidelines
 The website serves as a comprehensive platform for real estate transactions. Users can search for properties using various filters and calculate estimated monthly payments. Brokers have the ability to manage property listings and make purchase offers. System administrators oversee broker management.
 
