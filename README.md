@@ -1,11 +1,12 @@
-# PurpleTech Real Estate Website
+# PurpleTech Real Estate Web App
 
 ## Overview
-We are a software company dedicated to developing a real estate web application, a digital platform for property transactions, serving homebuyers, property renters, brokers, and system administrators.
+PurpleTech is a software company dedicated to developing a real estate web application, a digital platform for property transactions, serving homebuyers, property renters, brokers, and system administrators.
 
-### Real Estate Web App
+## Real Estate Web App
 The real estate web app facilitates buying, selling, and renting properties, offering features for users to search for properties, calculate monthly payments, and connect with brokers for property visits.
 
+### Users
 - **Homebuyers:** Search properties based on criteria, calculate payments, and connect with brokers.
 - **Property Renters:** Similar search capabilities, request property visits.
 - **System Administrators:** Manage broker activities.
