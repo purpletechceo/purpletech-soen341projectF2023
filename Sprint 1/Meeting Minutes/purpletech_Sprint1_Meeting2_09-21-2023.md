@@ -7,10 +7,10 @@
 **Location:** In-Person Meeting
 
 ## **Agenda**:
-1. **Summary of Sprint 1 requirements.**
-2. **Collaborative Google Doc.**
-3. **Read Me file updates.**
-4. **Task distribution.**
+1. Summary of Sprint 1 requirements.
+2. Collaborative Google Doc.
+3. Read Me file updates.
+4. Task distribution.
 
 ## **Meeting Details:**
 
@@ -26,13 +26,19 @@ Our team updated the README file to ensure it reflects the most current project 
 ### **Task Distribution:**
 To facilitate an efficient development process, tasks were thoughtfully distributed among team members based on their roles, strengths, and areas of expertise. The breakdown of tasks ensures that each team member has a specific focus and responsibilities aligned with their roles.
 
--Readme (Documentation): Min
--User Stories: Shah and Sadee
--Planning for Next Sprint (Wiki): Allaye
--Blog/Meeting Minutes: Oyeyimika
--Framework Research: Shah and Sadee
--Wiki and Project Setup: Grecia
-** We met up with Grecia later as she was a late addition to the group.
+1. Readme (Documentation): **Min**
+
+2. Wiki and Project Setup: **Grecia**
+
+3. Framework Research: **Shah and Sadee**
+
+4. User Stories/ Framework research: **Shah and Sadee**
+
+5. Planning for Next Sprint (Wiki): **Allaye**
+
+6. Meeting Minutes/ Dcumentation of Log & Task Distribution: **Oyeyimika**
+
+** **Grecia** was a late addition to the group.The team met with her after the meeing and discussed the Project requiremnets and roles.
 
 ## **Upcoming Plans:**
 We have scheduled a follow-up meeting for September 26th to provide updates on our tasks and to ensure that we stay on track with our planned activities. During this meeting, we will review our progress and set targets to have each activity completed by the specified deadlines. This proactive approach will help us maintain our project's momentum and meet our goals effectively.
@@ -49,7 +55,6 @@ During the meeting, several important questions and topics were discussed:
 4. **GitHub Folder Structure Placement:** Questions arose regarding where to place folders (e.g., Sprint 1, Sprint 2) within the GitHub repository.
 
 ## **Accomplishments:**
-Our Sprint 1 Planning Meeting led to several noteworthy accomplishments:
 
 - Task breakdown and distribution among team members.
 - Initialization of the GitHub repository, including adding the professor, TA, and tutor as collaborators.
