@@ -3,6 +3,18 @@
 ## Overview
 PurpleTech is a software company dedicated to developing a real estate web application, a digital platform for property transactions, serving homebuyers, property renters, brokers, and system administrators.
 
+## Reference
+https://github.com/purpletechceo/purpletech-soen341projectF2023/wiki
+
+## Roles
+Lead Front-end Developer: Huy Minh Le 
+Front-end Developer/Secretery: Oyeyimika Adeoye
+Front-end Developer: Allaye Dicko
+Lead Backend Developer: Shad Murshed
+Backend Developer: Sadee Shadman
+Backend Developer: Grecia O'Brien
+
+
 ## Real Estate Web App
 The real estate web app facilitates buying, selling, and renting properties, offering features for users to search for properties, calculate monthly payments, and connect with brokers for property visits.
 
