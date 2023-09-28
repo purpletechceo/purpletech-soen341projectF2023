@@ -24,7 +24,7 @@ Initial project planning.
 We began our kickoff meeting with an introduction session to foster a sense of camaraderie and collaboration among team members. During this session, we took the time to share our backgrounds, previous experiences, and areas of expertise. This informal exchange helped us become more acquainted with one another and set a positive tone for the meeting.
 
 ### **Roles Finalization:**
-After our ice-breaking session, we transitioned into the formal part of the meeting, which involved finalizing our roles and responsibilities for the upcoming project. Each team member actively participated in this discussion, considering their individual strengths, interests, and prior experiences. The goal was to ensure that each role was well-suited to the team member's skills and preferences.
+After our ice-breaking session, we transitioned into the formal part of the meeting, which involved finalizing our roles and responsibilities for the upcominhg project. Each team member actively participated in this discussion, considering their individual strengths, interests, and prior experiences. The goal was to ensure that each role was well-suited to the team member's skills and preferences.
 
 ### **Roles:**
 
@@ -34,7 +34,7 @@ Allaye Dicko (40224071 - SOEN): Frontend Developer
 
 Oyeyimika Adeoye (40124538 - COEN): Frontend Developer/Secretary
 
-Huy Min Le (40209514 - COEN): Frontend Developer
+Huy minh Le (40209514 - COEN): Frontend Developer
 
 Sadee Shadman (40236919 - SOEN): Backend Developer
 
