@@ -43,7 +43,3 @@ With a clear roadmap ahead and a shared commitment to excellence, the meeting wa
 - Huy Min Le 
 - Sadee Shadman 
 - Grecia O'Brien 
-
-**Attachments:**
-
-[Insert Any Relevant Attachments or Additional Notes]
