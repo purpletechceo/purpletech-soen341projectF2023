@@ -1,4 +1,4 @@
-# **Meeting Minutes - Sprint 1 Planning Meeting (September 21, 2023)**
+# **Meeting Minutes -  (September 26, 2023)**
 
 **Date:** September 26, 2023
 
