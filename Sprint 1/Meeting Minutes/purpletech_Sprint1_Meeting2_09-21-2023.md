@@ -14,41 +14,30 @@
 
 ## **Meeting Details:**
 
-###**Sprint 1 Summary:**
+### **Sprint 1 Summary:**
 We began the Sprint 1 Planning Meeting with Shah summarizing the key requirements for this initial sprint. This summary provided a clear understanding of our objectives and goals, ensuring that everyone was aligned with the sprint's scope.
 
-###**Collaborative Google Doc:**
+### **Collaborative Google Doc:**
 Our team collectively engaged in adding relevant information and project details into a shared Google Doc. This collaborative document was established as a central repository to streamline the organization of project-related information.
 
-###**Read Me File Update:**
-Recognizing the importance of accessibility, we decided to transfer pertinent information from the Google Doc into the project's Read Me file. This step ensures that essential project details are easily accessible to all team members and stakeholders. Here, we align with the GitHub repository's description, which stated: "This repository will contain all documents related to your project such as README file, project reports, meeting minutes, user stories, etc."
+### **Read Me File Update:**
+Our team updated the README file to ensure it reflects the most current project information and serves as a valuable resource for project-related details. The GitHub repository's will contain all documents related to your project such as README file, project reports, meeting minutes, user stories, etc."
 
-###**Task Distribution:**
+### **Task Distribution:**
 To facilitate an efficient development process, tasks were thoughtfully distributed among team members based on their roles, strengths, and areas of expertise. The breakdown of tasks ensures that each team member has a specific focus and responsibilities aligned with their roles.
 
-- Readme: Min
-- User stories: Shah and Shed
-- Planning for the next sprint: Allaye
-- Blog/ Meeting Minutes: Yimika
+-Readme (Documentation): Min
+-User Stories: Shah and Sadee
+-Planning for Next Sprint (Wiki): Allaye
+-Blog/Meeting Minutes: Oyeyimika
+-Framework Research: Shah and Sadee
+-Wiki and Project Setup: Grecia
+** We met up with Grecia later as she was a late addition to the group.
 
-###**Roles for Sprint 1:**
-As previously established, our roles for Sprint 1 are as follows:
+## **Upcoming Plans:**
+We have scheduled a follow-up meeting for September 26th to provide updates on our tasks and to ensure that we stay on track with our planned activities. During this meeting, we will review our progress and set targets to have each activity completed by the specified deadlines. This proactive approach will help us maintain our project's momentum and meet our goals effectively.
 
-- Frontend Developer: Min
-- Frontend Developer/Secretary: Yimika
-- Backend Developers: Shah and Shed, Grecia.
-- Frontend Developer: Allaye
-
-##**Upcoming Plans:**
-We have scheduled a follow-up meeting for September 26th to delve deeper into our project development and coordination. In preparation for the upcoming activities:
-
-- Min will focus on frontend development tasks.
-- Yimika, in addition to her frontend role, will serve as the secretary, responsible for documentation and meeting notes.
-- Shah and Shed will primarily handle backend development tasks, including in-depth research into frameworks and technologies to align with the project's technical requirements.
-- Allaye will continue working on frontend development.
-- We also plan to schedule regular meetings before class to ensure effective communication and collaboration among team members. This structure and organization will help keep everyone aligned and ensure that tasks are completed efficiently.
-
-##**Open Questions and Discussion Topics:**
+## **Open Questions and Discussion Topics:**
 During the meeting, several important questions and topics were discussed:
 
 1. **User Stories & Project Approach and Technology:** We deliberated on the format for submitting user stories, contemplating whether they should be included in the wiki or the Read Me file. Questions were raised regarding the extent of detail needed for project approach and technology research, including whether to provide justifications for choosing a particular framework and whether a framework decision should be made at this stage.
@@ -59,15 +48,20 @@ During the meeting, several important questions and topics were discussed:
 
 4. **GitHub Folder Structure Placement:** Questions arose regarding where to place folders (e.g., Sprint 1, Sprint 2) within the GitHub repository.
 
-**Accomplishments:**
+## **Accomplishments:**
 Our Sprint 1 Planning Meeting led to several noteworthy accomplishments:
 
 - Task breakdown and distribution among team members.
 - Initialization of the GitHub repository, including adding the professor, TA, and tutor as collaborators.
 - Documentation of meeting minutes and discussions.
-- In-depth research on potential backend and frontend frameworks.
+- Research on potential backend and frontend frameworks.
 - Collaboration on a shared Google Doc to centralize project-related information.
 - Establishment of project boards and agile tools to support project management.
+- Successful integration of our newest team member, Grecia, into the project.
+- Proactive planning with a scheduled follow-up meeting for September 26th to review progress and set targets,
 
-**Feedback from TA:**
-The TA provided valuable feedback during the meeting and instructed us to include justifications in the wiki, Read Me, and README files, ensuring that our project documentation meets the necessary standards.
+## **Feedback from TA:**
+During the LAB meeting, the TA provided valuable guidance and emphasized the importance of including justifications in our project documentation. 
+
+### **Closing:**
+We concluded the meeting with a productive discussion with the TA, who provided valuable insights and feedback. As part of our future plans, we have scheduled a follow-up meeting for September 26th to assess our progress on the assigned tasks and ensure alignment with the TA's guidance. This remote review will help us refine our documentation further and meet the required standards effectively.
