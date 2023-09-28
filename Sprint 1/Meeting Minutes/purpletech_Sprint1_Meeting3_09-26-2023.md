@@ -40,6 +40,6 @@ With a clear roadmap ahead and a shared commitment to excellence, the meeting wa
 - Shah Murshed 
 - Allaye Dicko 
 - Oyeyimika Adeoye 
-- Huy Min Le 
+- Huy Minh Le 
 - Sadee Shadman 
 - Grecia O'Brien 
