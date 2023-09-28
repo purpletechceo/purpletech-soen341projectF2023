@@ -26,7 +26,7 @@ Our team updated the README file to ensure it reflects the most current project 
 ### **Task Distribution:**
 To facilitate an efficient development process, tasks were thoughtfully distributed among team members based on their roles, strengths, and areas of expertise. The breakdown of tasks ensures that each team member has a specific focus and responsibilities aligned with their roles.
 
-1. Readme (Documentation): **Min**
+1. Readme (Documentation): **Minh**
 
 2. Wiki and Project Setup: **Grecia**
 
