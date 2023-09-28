@@ -2,7 +2,7 @@
 
 ### **Readme (Documentation):**
 
-**Min** is responsible for completion and   maintenance of the README file, ensuring it provides a clear description of the project, team members, roles, project approach, technology stack, and installation instructions for software used in the project. Min will also include justifications for the technology stack choices.
+**Minh** is responsible for completion and   maintenance of the README file, ensuring it provides a clear description of the project, team members, roles, project approach, technology stack, and installation instructions for software used in the project. Min will also include justifications for the technology stack choices.
 
 ### **Wiki and Project Setup:** 
 
@@ -22,5 +22,5 @@
 
 ### **Meeting Minutes:**
 
-**Oyeyimika**, will serve as the secretary responsible for documenting meeting minutes and discussions as well . Meeting minutes should be well-organized, named correctly, and include comprehensive details of each meeting as well as document the task breakdown and create a log of the activities in preparation of the Sprint 1.  **Oyeyimika** will ensure that the documents are properly uploaded to the project repository.
+**Oyeyimika**, will serve as the secretary responsible for documenting meeting minutes and discussions as well . Meeting Minutes should be well-organized, named correctly, and include comprehensive details of each meeting as well as document the task breakdown and create a log of the activities in preparation of the Sprint 1.  **Oyeyimika** will ensure that the documents are properly uploaded to the project repository.
 
