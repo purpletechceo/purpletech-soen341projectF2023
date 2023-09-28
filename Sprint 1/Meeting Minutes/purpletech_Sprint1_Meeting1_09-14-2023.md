@@ -38,7 +38,7 @@ Huy Min Le (40209514 - COEN): Frontend Developer
 
 Sadee Shadman (40236919 - SOEN): Backend Developer
 
-Grecia O'Brien (- SOEN): Backend Developer
+Grecia O'Brien (- SOEN): Backend Developer -Late Addition 
 
 
 ### **Role Discussion:**
