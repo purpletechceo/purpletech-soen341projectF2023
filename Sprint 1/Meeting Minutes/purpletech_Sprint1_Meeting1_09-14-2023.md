@@ -23,8 +23,6 @@ Initial project planning.
 ### **Introduction and Ice-Breaking:**
 We began our kickoff meeting with an introduction session to foster a sense of camaraderie and collaboration among team members. During this session, we took the time to share our backgrounds, previous experiences, and areas of expertise. This informal exchange helped us become more acquainted with one another and set a positive tone for the meeting.
 
-### **Roles Finalization:**
-After our ice-breaking session, we transitioned into the formal part of the meeting, which involved finalizing our roles and responsibilities for the upcominhg project. Each team member actively participated in this discussion, considering their individual strengths, interests, and prior experiences. The goal was to ensure that each role was well-suited to the team member's skills and preferences.
 
 ### **Roles:**
 
@@ -40,9 +38,9 @@ Sadee Shadman (40236919 - SOEN): Backend Developer
 
 Grecia O'Brien (- SOEN): Backend Developer -Late Addition 
 
+### **Roles Finalization:**
+After our ice-breaking session, we transitioned into the formal part of the meeting, which involved finalizing our roles and responsibilities for the upcominhg project. Each team member actively participated in this discussion, considering their individual strengths, interests, and prior experiences. The goal was to ensure that each role was well-suited to the team member's skills and preferences.
 
-### **Role Discussion:**
-We used the assignment's role descriptions as a starting point for our discussions. Team members shared their strengths and areas of expertise to finalize their roles. Shah Murshed expressed his proficiency in C++ and Java, which led to his role as a Backend Developer. Allaye Dicko, with her expertise in HTML, took on the role of Frontend Developer. Oyeyimika Adeoye, with documentation skills and knowledge of C++ and Java, was assigned the role of Frontend Developer/Secretary.
 
 ### **GitHub Repository Setup:** 
 We initiated the setup of our GitHub repository. This repository will serve as the central hub for our project, where we will collaborate, share code, and manage project-related documentation. The structure of the repository was designed to align with our roles and responsibilities, making it easier to organize and manage our work. Roles and responsibilities were integrated into the repository's structure.
