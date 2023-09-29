@@ -30,9 +30,9 @@ To facilitate an efficient development process, tasks were thoughtfully distribu
 
 2. Wiki and Project Setup: **Grecia**
 
-3. Framework Research: **Shah and Sadee**
+3. Framework Research: **Shah**
 
-4. User Stories/ Framework research: **Shah and Sadee**
+4. User Stories: **Shah and Sadee**
 
 5. Planning for Next Sprint (Wiki): **Allaye**
 
