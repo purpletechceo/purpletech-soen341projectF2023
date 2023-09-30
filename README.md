@@ -9,7 +9,7 @@ https://github.com/purpletechceo/purpletech-soen341projectF2023/wiki
 ## Roles
 - Lead Front-end Developer: Huy Minh Le 
 - Front-end Developer/Secretery: Oyeyimika Adeoye
-- Front-end Developer: Allaye Dicko
+- Scrum Master/Front-end Developer: Allaye Dicko
 - Lead Backend Developer: Shad Murshed
 - Backend Developer: Sadee Shadman
 - Backend Developer: Grecia O'Brien
