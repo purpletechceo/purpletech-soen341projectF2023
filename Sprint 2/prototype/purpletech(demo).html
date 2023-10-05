@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation with Login</title>
+  <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="image/purple.png" alt="Logo">
+      <span class="company-name">PurpleTech</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Find a Home</a>
+      <a href="#">Create a listing</a>
+      <a href="#">support</a>
+      <a href="#">about us</a>
+    </div>
+    <div class="dropdown">
+      <button onclick="toggleLogin()">Login</button>
+      <div class="dropdown-content" id="loginDropdown">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button>Login</button>
+      </div>
+    </div>
+  </nav>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="image/house1.avif" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/house2.jfif" style="width:100%">
+    </div>
+
+    <!-- Add more slides with different images as needed -->
+
+  </div>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search by location">
+  </div>
+  <script>
+    function toggleLogin() {
+      var loginDropdown = document.getElementById("loginDropdown");
+      loginDropdown.style.display = (loginDropdown.style.display === "block") ? "none" : "block";
+    }
+  </script>
+   <script src="slideshow.js"></script>
+</body>
+</html>
