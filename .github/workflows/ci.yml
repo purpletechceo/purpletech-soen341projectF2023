@@ -3,7 +3,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - prototype  # Adjust to with main branch name
+      - main  # Adjust to with main branch name
 
 jobs:
   build:
