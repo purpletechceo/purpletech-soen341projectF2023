@@ -18,7 +18,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Create a copy of the DataFrame without the 'email' column
-df_filtered = df[['house address', 'house type', 'number of rooms', 'number of bathrooms', 'image', 'broker_email']]
+df_filtered = df[['house address', 'house type', 'number of rooms', 'number of bathrooms', 'image']]
 
 gd = GridOptionsBuilder.from_dataframe(df_filtered)
 gd.configure_selection(selection_mode='single', use_checkbox=True)
