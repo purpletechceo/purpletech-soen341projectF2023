@@ -1,102 +1,73 @@
 import streamlit as st
-import pandas as pd
-from st_aggrid import AgGrid, GridUpdateMode
-from st_aggrid.grid_options_builder import GridOptionsBuilder
+import requests
 
-image1 = 'https://www.forbes.com/advisor/wp-content/uploads/2022/10/what-is-a-townhouse.jpeg.jpg'
-image2 = 'https://simpleshowing.ghost.io/content/images/2023/01/GetMedia-1.jpeg'
+# Google OAuth configuration
 
-data = {
-    'house address': ['House 1', 'House 2'],
-    'house type': ['Townhouse', 'Split Level'],
-    'number of rooms': ['6', '7'],
-    'number of bathrooms': ['2', '3'],
-    'image': [image1, image2],
-    'broker_email': ['johnterry@gmail.com', 'terrencewallace@hotmail.com']
-}
+CLIENT_ID = "30633705814-mjshvsq8g040ep704qrs0hl3uaam7a6d.apps.googleusercontent.com"
+CLIENT_SECRET = "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"
+REDIRECT_URI = "http://localhost:8501"
 
-df = pd.DataFrame(data)
+# Streamlit app
+st.title("Google Login App")
 
-# Create a copy of the DataFrame without the 'email' column
-df_filtered = df[['house address', 'house type', 'number of rooms', 'number of bathrooms', 'image']]
+# Check if the user is logged in
+if 'access_token' not in st.session_state:
+    st.session_state.access_token = None
 
-gd = GridOptionsBuilder.from_dataframe(df_filtered)
-gd.configure_selection(selection_mode='single', use_checkbox=True)
-gd.configure_column('image', hide=True)
-gridoptions = gd.build()
+# Redirect user to Google for authentication
+google_auth_url = f"https://accounts.google.com/o/oauth2/auth?client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&response_type=code&scope=email profile"
+google_link = f'<a href="{google_auth_url}" target="_self">Login with Google</a>'
+st.markdown(google_link, unsafe_allow_html=True)
 
-# Initialize the visit request DataFrame
-visit_request_df = pd.DataFrame(columns=["b_email", "property", "fname", "lname", "pnumber", "email", "date_time"])
+# Sign-out button
+sign_out_button = st.button("Sign Out")
 
-# Dropdown filter for house type
-selected_house = st.selectbox('Select Property Type', ['All'] + list(df_filtered['house type'].unique()))
+# Handle sign-out
+if sign_out_button and st.session_state.access_token:
+    # Revoke the access token
+    revoke_url = f"https://accounts.google.com/o/oauth2/revoke?token={st.session_state.access_token}"
+    response = requests.get(revoke_url)
 
-# Display the ag-Grid with house information
-st.write("## List of Properties")
+    if response.status_code == 200:
+        st.session_state.access_token = None
+        st.write("You have been signed out.")
+    else:
+        st.write("Error: Unable to sign out.")
 
-if selected_house != 'All':
-    filtered_df = df_filtered[df_filtered['house type'] == selected_house]
+# Get the authorization code from the URL query parameters after the redirect
+query_params = st.experimental_get_query_params()
+auth_code = query_params.get("code")
+
+if auth_code:
+    # Exchange authorization code for access token and fetch user data
+    token_url = "https://oauth2.googleapis.com/token"
+    token_params = {
+        "code": auth_code,
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET,
+        "redirect_uri": REDIRECT_URI,
+        "grant_type": "authorization_code",
+    }
+
+    response = requests.post(token_url, data=token_params)
+    if response.status_code == 200:
+        access_token = response.json().get("access_token")
+        st.session_state.access_token = access_token  # Store access token in session state
+        # Fetch user data from Google API
+        user_info_url = "https://www.googleapis.com/oauth2/v3/userinfo"
+        headers = {"Authorization": f"Bearer {access_token}"}
+        user_info_response = requests.get(user_info_url, headers=headers)
+
+        if user_info_response.status_code == 200:
+            user_data = user_info_response.json()
+            user_email = user_data.get("email")
+            st.write(f"Hello {user_email}")
+        else:
+            st.write("Error: Unable to fetch user data from Google.")
+    else:
+        st.write("Click the link above to log in with Google.")
+elif st.session_state.access_token:
+    # If the user is already logged in, display their email
+    st.write(f"Hello {st.session_state.access_token}")
 else:
-    filtered_df = df_filtered
-
-grid_table = AgGrid(filtered_df, height=250, gridOptions=gridoptions, update_mode=GridUpdateMode.SELECTION_CHANGED)
-
-if grid_table['selected_rows']:
-    selected_row = grid_table['selected_rows'][0]
-    image_column, description_column = st.columns(2)
-
-    with image_column:
-        st.image(selected_row['image'], caption='Selected Image', use_column_width=True)
-
-    with description_column:
-        st.write(f"House Address: {selected_row['house address']}\n"
-                 f"\nHouse Type: {selected_row['house type']}\n"
-                 f"\nNumber of Rooms: {selected_row['number of rooms']}\n"
-                 f"\nNumber of Bathrooms: {selected_row['number of bathrooms']}")
-
-    if st.button("Request Visit"):
-
-        # Use st.form to wrap all the inputs
-        with st.form(key='visit_request_form'):
-            fname = st.text_input("First Name")
-            lname = st.text_input("Last Name")
-            pnumber = st.text_input("Phone Number")
-            email = st.text_input("Email")
-            date = st.date_input("Visit Date", value="today", key='visit_date')
-            time = st.time_input("Visit Time", value="now", key='visit_time')
-            submitted = st.form_submit_button("Submit Request")
-
-        if submitted:
-            # Process the form submission
-            broker_email = selected_row['broker_email']
-            new_request = pd.DataFrame({
-                "b_email": [broker_email],
-                "property": [selected_row['house address']],
-                "fname": [fname],
-                "lname": [lname],
-                "pnumber": [pnumber],
-                "email": [email],
-                "date": [date],
-                "time": [time]
-            })
-
-            # Append the new request to the visit request DataFrame
-            visit_request_df = visit_request_df.append(new_request, ignore_index=True)
-
-            st.write("Request submitted successfully!")
-
-# Display the table with visit requests
-st.write("## Visit Requests")
-if not visit_request_df.empty:
-    st.dataframe(visit_request_df, height=250)
-else:
-    st.info("No visit requests yet.")
-
-# Boiler plate code:
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    st.write("Sign in")
