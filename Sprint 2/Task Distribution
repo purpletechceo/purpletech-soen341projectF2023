@@ -1,0 +1,42 @@
+Search for Properties (Shah and Grecia):
+Objective: Implement a feature that allows users to search for properties.
+Tasks:
+Design and implement the user interface for the property search feature.
+Develop the backend functionality for searching properties based on user input.
+Ensure that search results are displayed clearly and accurately.
+Integrate search functionality into the main application.
+Requests for Visits to Properties (Shah and Allaye):
+Objective: Develop a feature that enables users to request visits to properties.
+Tasks:
+Create a user-friendly interface for requesting property visits.
+Implement the backend logic to process visit requests.
+Ensure proper notifications and confirmations are sent to both users and property owners.
+Integrate this feature into the main application.
+CRUD Operations on Properties (Shah and Yimika):
+Objective: Enable the Create, Read, Update, and Delete operations for property listings.
+Tasks:
+Develop forms and interfaces for creating and updating property listings.
+Implement the logic for CRUD operations, including validation and error handling.
+Ensure that property listings are displayed accurately to users.
+Test and troubleshoot CRUD operations to ensure their reliability.
+CRUD Operations on Brokers (Shah and Sadee):
+Objective: Implement CRUD operations for broker information.
+Tasks:
+Create forms and interfaces for adding, updating, and managing broker details.
+Develop the backend to handle broker information effectively.
+Ensure security measures for handling sensitive broker data.
+Integrate the CRUD functionality into the application.
+Front End (Minh and Sadee):
+Objective: Work on the frontend development of the application.
+Tasks:
+Enhance the user interface and user experience (UI/UX) of the application.
+Ensure consistency in the design and layout.
+Collaborate with other team members to integrate new features into the frontend.
+Test and optimize the application's performance.
+Writing Acceptance Tests (Sadee):
+Objective: Create acceptance tests for user stories identified in the first sprint.
+Tasks:
+Identify the user stories from the first sprint that require acceptance tests.
+Write comprehensive tests for these user stories, covering different scenarios.
+Label the tests as "acceptance test (AT)" and link them to the corresponding user story-tasks.
+Ensure that the acceptance tests accurately reflect the expected behavior.
