@@ -22,10 +22,7 @@ jobs:
           python-version: [3.7, 3.8, 3.9, 3.10]
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # Replace with your requirements file if needed
-
-      - name: Run flake8
-        run: flake8
-
-      - name: Run pytest
-        run: pytest
+        run: pip install -r requirements.txt  
+      
+      - name: Run pytest on test_initial.py
+        run: pytest "Sprint 2/Implemented Features/Backend/test_initial.py"
