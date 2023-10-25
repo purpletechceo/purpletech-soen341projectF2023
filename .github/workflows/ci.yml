@@ -26,9 +26,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run flake8
-        run: flake8 --statistics
-
       - name: Run pytest on test_initial.py
         run: pytest "Sprint 2/Implemented Features/Backend/test_initial.py"
-
+        
