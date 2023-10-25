@@ -1,5 +1,8 @@
-import googleLogin
-import houseFilteringDemo
+import pytest
+import streamlit as st
+import pandas as pd
+from st_aggrid import AgGrid, GridUpdateMode
+from st_aggrid.grid_options_builder import GridOptionsBuilder
 
 """
 st.title('Counter Example')
@@ -13,7 +16,7 @@ if increment:
 st.write('Count = ', st.session_state.count)
 """
 
-class Tests:
+class Test:
     """
     # Test case for checking if the app title is set correctly
     def test_app_title(self):
@@ -34,11 +37,11 @@ class Tests:
     """
 
     # Acceptance Test 1: Search
-    def search_correct_location(self):
+    def test_search_correct_location(self):
         pass
 
     # Acceptance Test 2: Filter
-    def filter_results(self):
+    def test_filter_results(self):
         pass
 
     # Acceptance Test 1: Options checking by brokers
