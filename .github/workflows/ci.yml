@@ -1,45 +1,27 @@
-name: Continuous Integration
+name: CI
 
 on:
   push:
-    branches: [main]  # Adjust to with main branch name
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main  
 
 jobs:
-  build:
+  lint-and-test:
+    runs-on: windows-latest # Use this set to test on various systems [ubuntu-latest, macos-latest, windows-latest]
+
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.7, 3.8, 3.9, 3.10]  # Add the Python versions you want to test
-
-    runs-on: ${{ matrix.os }}
+        python-version: [3.7, 3.8, 3.9, 3.10]
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt  # Replace with requirements file name
-      working-directory: path/to/your/repo  # Replace with the actual path
-
-    - name: Run tests
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-test.txt  # Replace with your test requirements file name
-        python -m pytest tests/  # Replace with your test directory
-      working-directory: path/to/your/repo  # Replace with the actual path
-
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: path/to/your/repo/tests/  # Replace with the actual path
-
-    - name: Deploy to production (if needed)
-      # Add deployment steps here if applicable
+      - name: Run pytest on test_initial.py
+        run: pytest "Sprint 2/Implemented Features/Backend/test_initial.py"
