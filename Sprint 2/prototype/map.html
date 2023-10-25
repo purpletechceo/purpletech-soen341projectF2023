@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Marker</title>
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtjgpyEqy6yRx191X_A4vG_4JQZF_N77I&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <gmp-map center="45.499542236328125,-73.57090759277344" zoom="14" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker position="45.499542236328125,-73.57090759277344" title="My location">
+      </gmp-advanced-marker>
+    </gmp-map>
+  </body>
+</html>
