@@ -12,7 +12,7 @@ on:
 
 # Define the jobs that this workflow consists of
 jobs:
-    continuous-integration:
+  continuous-integration:
     # Specify the operating system to run this job (Windows in this case)
     runs-on: windows-latest # You can use different OS types [ubuntu-latest, macos-latest, windows-latest]
 
