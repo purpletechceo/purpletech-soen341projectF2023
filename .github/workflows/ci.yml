@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [main]  # Adjust to with main branch name
+    branches: [main]
 
 jobs:
   build:
