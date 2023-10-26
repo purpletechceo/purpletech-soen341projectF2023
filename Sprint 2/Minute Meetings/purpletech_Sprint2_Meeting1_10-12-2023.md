@@ -15,7 +15,6 @@ We convened the Sprint 2 Planning Meeting to outline the core features and assig
 
 - **Search for Properties (Shah):**
    - Shah shared plans for the property search feature's user interface.
-   - Grecia clarified her role in the implementation of Continuous Integration (CI) on GitHub.
    - Collaboration is ongoing to ensure seamless integration.
 
 - **Requests for Visits to Properties (Allaye):**
@@ -28,18 +27,21 @@ We convened the Sprint 2 Planning Meeting to outline the core features and assig
    - Yimika detailed the logic behind CRUD operations and error handling.
    - Strategies for testing and troubleshooting were discussed.
 
-- **CRUD Operations on Brokers (Shah Sadee):**
+- **CRUD Operations on Brokers (Sadee):**
    - presented the broker-related forms and interfaces.
    - Sadee shared plans for backend security and data handling.
    - Integration with the application is in progress.
-   - Shah assisted
+   -- Discussion on writing comprehensive acceptance tests.
+     
+   - Shah will be assisting Allaye, Yimika and Sadee on their tasks as he is more proficient in the process.
 
 - **Front End (Minh and Shah):**
    - Minh discussed UI/UX enhancements.
    - Sadee explained how consistency in design and layout is being maintained.
    - Optimization strategies and performance testing were discussed.
 
-- **Grecia- integration of 
+- **Integration of (Grecia):**
+-   - Grecia clarified her role in the implementation of Continuous Integration (CI) on GitHub.
 
 ### Progress Review
 
@@ -63,16 +65,15 @@ We addressed several questions and discussion topics:
 4. **Submission and Deadlines:** The team clarified submission deadlines and expectations for Sprint 2.
 
 ## Accomplishments
-
 - Detailed planning and assignment of core features and subtasks.
 - Discussion on writing comprehensive acceptance tests.
 - Progress review and issue deliberation for each core feature.
 - Clarifications on labeling of tests and tracking progress.
-- Clear plans for the upcoming follow-up meeting on October 24th.
+- Clear plans for the upcoming follow-up meeting on October 21th.
 
 ## Closing
 
-The meeting concluded with an understanding of the tasks ahead and the importance of continuous collaboration and communication. We are committed to meeting our deadlines and ensuring the success of Sprint 2.
+The meeting concluded with an understanding of the tasks ahead and continuous collaboration and communication will be . We are committed to meeting our deadlines and ensuring the success of Sprint 2.
 
 *Meeting minutes recorded by Oyeyimika.*
 
