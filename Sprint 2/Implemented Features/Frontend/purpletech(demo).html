@@ -4,7 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navigation with Login</title>
-  <link rel="stylesheet" href="mainpage.css">
+  <link rel="stylesheet" href="mainpage1.css">
+  <style>
+    gmp-map {
+      height: 400px; /* Adjust the height as needed */
+      width: 100%; /* Adjust the width as needed */
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .property-card {
+      display: flexbox;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      
+    }
+    .property-card img {
+      width: 50%;
+      height: auto;
+      padding: 10px;
+    }
+    .property-card-content {
+      padding: 10px;
+    }
+    .house-list {
+      margin-top:30%;
+      margin-left: 10%;
+      width: 30%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -15,41 +49,47 @@
     <div class="nav-links">
       <a href="#">Find a Home</a>
       <a href="#">Create a listing</a>
-      <a href="#">support</a>
-      <a href="#">about us</a>
+      <a href="#">Support</a>
+      <a href="#">About Us</a>
+      <a href="login.html" target="_blank">Login</a>
     </div>
-    <div class="dropdown">
-      <button onclick="toggleLogin()">Login</button>
-      <div class="dropdown-content" id="loginDropdown">
-        <h2>Login</h2>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <button>Login</button>
-      </div>
+
     </div>
   </nav>
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="image/house1.avif" style="width:100%">
-    </div>
-
-    <div class="mySlides fade">
-      <img src="image/house2.jfif" style="width:100%">
-    </div>
-
     <!-- Add more slides with different images as needed -->
-
   </div>
+  
+  <div class="map-container">
+    <gmp-map center="45.499542236328125,-73.57090759277344" zoom="14" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker position="45.499542236328125,-73.57090759277344" title="My location">
+      </gmp-advanced-marker>
+    </gmp-map>
+    </div>
+    <div class="house-list">
+      <div class="property-card">
+        <img src="/image/house1.avif" alt="Property 1">
+        <div class="property-card-content">
+          <h2>Luxury Villa</h2>
+          <p>Spacious villa with a stunning view of the city. Ideal for high-end living.</p>
+          <p class="price">$5,000,000</p>
+          <button class="purchase-button">Purchase</button>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="/image/house2.jfif" alt="Property 2">
+        <div class="property-card-content">
+          <h2>Penthouse Suite</h2>
+          <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
+          <p class="price">$3,500,000</p>
+          <button class="purchase-button">Purchase</button>
+        </div>
+      </div>
+    </div>
+  
 
-  <div class="search-container">
-    <input type="text" placeholder="Search by location">
-  </div>
-  <script>
-    function toggleLogin() {
-      var loginDropdown = document.getElementById("loginDropdown");
-      loginDropdown.style.display = (loginDropdown.style.display === "block") ? "none" : "block";
-    }
-  </script>
-   <script src="slideshow.js"></script>
-</body>
+      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtjgpyEqy6yRx191X_A4vG_4JQZF_N77I&callback=console.debug&libraries=maps,marker&v=beta">
+      </script>
+      <link rel="stylesheet" href="style.css"/>
+ 
+  </body>
 </html>
