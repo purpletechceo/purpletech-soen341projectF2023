@@ -1,7 +1,11 @@
 # Meeting Minutes - Sprint 2 Planning Meeting
+
 **Date:** 15/10/23 
+
 **Time:** 2:00 PM -3:00PM 
-**Location:** Online Meeting  
+
+**Location:** Online Meeting
+
 **Attendees:** Huy Minh Le, Oyeyimika Adeoye, Allaye Dicko, Shah Murshed, Sadee Shadman, Grecia O'Brien  
 
 ## Agenda
