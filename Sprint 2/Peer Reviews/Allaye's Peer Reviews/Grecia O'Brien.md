@@ -5,7 +5,7 @@
 | 3 | Code Quality                      |           |      |         |  X   |           |
 | 4 | Communication                     |           |      |   X     |      |           |
 | 5 | Collaboration                     |           |      |         |  X   |           |
-| 6 | Meeting Deadlines                 |           |      |         |      |     X      |
+| 6 | Meeting Deadlines                 |           |      |         |      |     X     |
 | 7 | Project Knowledge                 |           |      |         |      |     X     |
 | 8 | Creativity and Innovation         |           |      |         |  X   |           |
 | 9 | Adaptability                      |           |      |         |  X   |           |
