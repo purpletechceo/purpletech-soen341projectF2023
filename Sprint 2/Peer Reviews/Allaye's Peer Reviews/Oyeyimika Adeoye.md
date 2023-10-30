@@ -1,12 +1,12 @@
 | # | Categories                        | Very Poor | Poor | Average | Good | Excellent |
 |---|-----------------------------------|-----------|------|---------|------|-----------|
-| 1 | Technical Proficiency             |           |      |         |      |           |
-| 2 | Problem-Solving                   |           |      |         |      |           |
-| 3 | Code Quality                      |           |      |         |      |           |
-| 4 | Communication                     |           |      |         |      |           |
-| 5 | Collaboration                     |           |      |         |      |           |
-| 6 | Meeting Deadlines                 |           |      |         |      |           |
-| 7 | Project Knowledge                 |           |      |         |      |           |
-| 8 | Creativity and Innovation         |           |      |         |      |           |
-| 9 | Adaptability                      |           |      |         |      |           |
-|10 | Overall Contribution              |           |      |         |      |           |
+| 1 | Technical Proficiency             |           |      |    X    |      |           |
+| 2 | Problem-Solving                   |           |      |         |  X   |           |
+| 3 | Code Quality                      |           |      |         |  X   |           |
+| 4 | Communication                     |           |      |         |      |     X     |
+| 5 | Collaboration                     |           |      |         |      |     X     |
+| 6 | Meeting Deadlines                 |           |      |         |      |     X     |
+| 7 | Project Knowledge                 |           |      |         |      |     X     |
+| 8 | Creativity and Innovation         |           |      |         |      |     X     |
+| 9 | Adaptability                      |           |      |         |  X   |           |
+|10 | Overall Contribution              |           |      |         |      |     X     |
