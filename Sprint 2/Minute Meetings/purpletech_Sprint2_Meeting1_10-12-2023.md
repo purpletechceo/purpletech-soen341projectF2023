@@ -1,79 +1,48 @@
 # Meeting Minutes - Sprint 2 Planning Meeting
-* **Date:** October 15, 2023
-* **Time:** 6:00 PM
-* **Location:** Virtual Meeting
+**Date:15/10/23  
+**Time: 2:00 PM -3:00PM 
+**Location:Online Meeting  
+**Attendees: Huy Minh Le, Oyeyimika Adeoye, Allaye Dicko, Shah Murshed, Sadee Shadman, Grecia O'Brien  
 
 ## Agenda
-1. Sprint 2 Core Features Planning and Tasks Assignment.
-2. Task Distribution and Subtask Assignments.
 
-## Meeting Details
+The meeting began with a casual catch-up, allowing team members to reconnect and prepare for Sprint 2. We collectively reviewed the Sprint 2 information and discussed the current state of the project.
 
-### Sprint 2 Core Features Planning and Tasks Assignment
+## Task Distribution
 
-We convened the Sprint 2 Planning Meeting to outline the core features and assign tasks for this sprint. Each team member discussed their assigned core feature and related tasks. The following details were provided:
+Allaye led the breakdown of tasks for the upcoming sprint, ensuring each core feature was examined and assigned to team members based on their skills and responsibilities:
 
-- **Search for Properties (Shah):**
-   - Shah shared plans for the property search feature's user interface.
-   - Collaboration is ongoing to ensure seamless integration.
+1. **Search for Properties (Allaye & Shah):** Allaye and Shah will collaborate to create an efficient property search feature. Users can search based on criteria like location, price, bedrooms, and amenities, with results presented in a user-friendly format.
 
-- **Requests for Visits to Properties (Allaye):**
-   - Shah explained the development of the visit request interface.
-   - Allaye shared plans for backend processing of visit requests.
-   - Discussions are underway regarding the notification system to ensure user and owner confirmations.
+2. **Requests for Visits to Properties (Allaye & Shah):** Allaye and Shah will work together on the functionality for requesting property visits, facilitating coordination between users, property owners, and brokers.
 
-- **CRUD Operations on Properties (Yimika):**
-   - Shah outlined the design of create and update property forms.
-   - Yimika detailed the logic behind CRUD operations and error handling.
-   - Strategies for testing and troubleshooting were discussed.
+3. **CRUD Operations on Properties for Brokers (Yimika):** Yimika is tasked with implementing Create, Read, Update, and Delete operations for property listings, enhancing broker property management.
 
-- **CRUD Operations on Brokers (Sadee):**
-   - presented the broker-related forms and interfaces.
-   - Sadee shared plans for backend security and data handling.
-   - Integration with the application is in progress.
-   -- Discussion on writing comprehensive acceptance tests.
-     
-   - Shah will be assisting Allaye, Yimika and Sadee on their tasks as he is more proficient in the process.
+4. **CRUD Operations on Properties for Administrator (Sadee):** Sadee will manage property listings, including confirmation and approvals of listings, building on Yimika’s tasks.
 
-- **Front End (Minh and Shah):**
-   - Minh discussed UI/UX enhancements.
-   - Sadee explained how consistency in design and layout is being maintained.
-   - Optimization strategies and performance testing were discussed.
+5. **Configuration for GitHub (Grecia):** Grecia will set up Continuous Integration (CI) for GitHub, ensuring automated tests run seamlessly on each push or pull request to the main branch.
 
-- **Integration of (Grecia):**
--   - Grecia clarified her role in the implementation of Continuous Integration (CI) on GitHub.
+6. **Front End and User Interface of the Web App (Minh):** Minh will enhance the web app's front end, focusing on user experience, design consistency, and performance optimization.
 
-### Progress Review
+7. **Acceptance Tests (Sadee):** Sadee will create acceptance tests to ensure feature functionality and align with user stories.
 
-Each team member provided updates on their progress. Challenges and roadblocks were discussed, and collaborative problem-solving strategies were considered.
+## Reflection on User Stories and Task Discussions
 
-### Task Distribution and Subtask Assignments
+We emphasized the importance of aligning our development closely with the user stories to ensure successful implementations. Additionally, building upon Shah's existing web app prototype was highlighted as a solid foundation for our work. This alignment maintains design consistency and enhances the overall user experience.
 
-The team decided to break down core feature tasks into subtasks and assigned them to specific team members for clarity and accountability. It was agreed that continuous communication is essential to ensure smooth progress.
+## Collaboration
 
-## Upcoming Plans
+Shah generously offered assistance to team members in implementing their core features. His expertise in Python and Streamlit will be a valuable resource for the team's success. We have scheduled individual assistance sessions to address questions and challenges.
 
-We scheduled a follow-up meeting for October 21, 2023, at 2:00 PM. During this meeting, each team member is expected to have their functions working for submission at the end of Sprint 2. The meeting will be a crucial point to evaluate progress and discuss any remaining issues.
+## Upcoming Plans/Meetings
 
-## Open Questions and Discussion Topics
+We plan to reconvene on October 21st, 2023, to review each team member's progress on their assigned tasks, discuss implementation challenges, and provide status updates. Continuous collaboration and communication will be maintained through our Discord channel.
 
-We addressed several questions and discussion topics:
+## Conclusion
 
-1. **Acceptance Tests and Labeling:** The importance of properly labeling acceptance tests was reiterated.
-2. **Progress Tracking:** The need to maintain a detailed log of contributions was emphasized.
-3. **Integration and Testing:** The team discussed the integration of features and the importance of thorough testing.
-4. **Submission and Deadlines:** The team clarified submission deadlines and expectations for Sprint 2.
+The meeting provided a clear roadmap for Sprint 2, with each team member assigned specific core features to work on. We are committed to the successful implementation of the project and are dedicated to overcoming any challenges that may arise as a team.
 
-## Accomplishments
-- Detailed planning and assignment of core features and subtasks.
-- Discussion on writing comprehensive acceptance tests.
-- Progress review and issue deliberation for each core feature.
-- Clarifications on labeling of tests and tracking progress.
-- Clear plans for the upcoming follow-up meeting on October 21th.
 
-## Closing
-
-The meeting concluded with an understanding of the tasks ahead and continuous collaboration and communication will be . We are committed to meeting our deadlines and ensuring the success of Sprint 2.
 
 *Meeting minutes recorded by Oyeyimika.*
 
