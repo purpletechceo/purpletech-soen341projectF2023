@@ -3,12 +3,18 @@ import folium  # For embedding Google Maps
 
 # Define property data globally (replace with real data)
 property_data = [
-    {"name": "Property 1", "location": [45.5017, -73.5673], "price": 500000, "bedrooms": 3},
-    {"name": "Property 2", "location": [45.5091, -73.5521], "price": 750000, "bedrooms": 4},
-    {"name": "Property 3", "location": [45.4987, -73.5801], "price": 600000, "bedrooms": 3},
-    {"name": "Property 4", "location": [45.5200, -73.6000], "price": 550000, "bedrooms": 2},
-    {"name": "Property 5", "location": [45.5050, -73.5900], "price": 800000, "bedrooms": 5},
-    {"name": "Property 6", "location": [45.5120, -73.5580], "price": 650000, "bedrooms": 4},
+    {"name": "Property 1", "location": [45.5017, -73.5673], "price": 500000, "bedrooms": 3, "property_type": "House"},
+    {"name": "Property 2", "location": [45.5091, -73.5521], "price": 750000, "bedrooms": 4, "property_type": "Condo"},
+    {"name": "Property 3", "location": [45.4987, -73.5801], "price": 600000, "bedrooms": 3, "property_type": "Apartment"},
+    {"name": "Property 4", "location": [45.5200, -73.6000], "price": 550000, "bedrooms": 2, "property_type": "House"},
+    {"name": "Property 5", "location": [45.5050, -73.5900], "price": 800000, "bedrooms": 5, "property_type": "Condo"},
+    {"name": "Property 6", "location": [45.5120, -73.5580], "price": 650000, "bedrooms": 4, "property_type": "House"},
+    {"name": "Property 7", "location": [45.5017, -73.5673], "price": 500000, "bedrooms": 3, "property_type": "House"},
+    {"name": "Property 8", "location": [45.5091, -73.5521], "price": 750000, "bedrooms": 4, "property_type": "Condo"},
+    {"name": "Property 9", "location": [45.4987, -73.5801], "price": 600000, "bedrooms": 3, "property_type": "Apartment"},
+    {"name": "Property 10", "location": [45.5200, -73.6000], "price": 550000, "bedrooms": 2, "property_type": "House"},
+    {"name": "Property 11", "location": [45.5050, -73.5900], "price": 800000, "bedrooms": 5, "property_type": "Condo"},
+    {"name": "Property 12", "location": [45.5120, -73.5580], "price": 650000, "bedrooms": 4, "property_type": "House"},
 ]
 
 # Initialize filtered_properties at the beginning of the script
@@ -36,31 +42,38 @@ def sort_and_filter_properties(properties, sort_option):
         properties.sort(key=lambda x: x["name"])
     return properties
 
-# Feature 1: Property Search and Filter (Extended)
-st.sidebar.header("Property Search")
-location = st.sidebar.text_input("Location")
-price_range = st.sidebar.slider("Price Range ($)", 0, 2000000, (0, 2000000))
-property_type = st.sidebar.selectbox("Property Type", ["House", "Apartment", "Condo", "Land"])
-bedrooms = st.sidebar.selectbox("Bedrooms", [1, 2, 3, 4, 5])
-
-# Feature 2: Interactive Maps using Google Maps
-st.header("Property Listings on Map")
-
-# Function to display properties on Google Maps
+# Function to display properties on Google Maps with custom icons
 def display_properties_on_map(properties):
     # Create a map centered on Montreal
     m = folium.Map(location=[45.5017, -73.5673], zoom_start=12)  # Montreal's coordinates
+
+    # Define custom icon for the house marker
+    house_icon = folium.CustomIcon(icon_image="house-icon.png", icon_size=(30, 30))
 
     for property in properties:
         folium.Marker(
             location=property["location"],
             tooltip=property["name"],
+            icon=house_icon,  # Use the custom house icon
         ).add_to(m)
 
     return m
 
+# Feature 1: Property Search and Filter (Extended)
+st.sidebar.header("Potential UI/UX Improvement #2: Sidebar")
+st.sidebar.header("Property Search")
+location = st.sidebar.text_input("Location")
+price_range = st.sidebar.slider("Price Range ($)", 0, 2000000, (0, 2000000))
+property_type = st.sidebar.selectbox("Property Type", ["House", "Apartment", "Condo"])
+bedrooms = st.sidebar.selectbox("Bedrooms", [1, 2, 3, 4, 5])
+
+# Feature 2: Interactive Maps using Google Maps
+st.header("Spring 3-4: Potential Nice-to-Have Features")
+st.write("As ")
+st.header("Property Listings on Map")
+
 # Display the map with property markers (updated to show filtered properties)
-st.markdown("### Property Locations")
+st.markdown("### Potential UI/UX Improvement #1 Property Locations")
 st.write("Click on the markers to view property details.")
 st.components.v1.html(display_properties_on_map(filtered_properties)._repr_html_(), height=500)
 
@@ -103,7 +116,9 @@ else:
     st.warning("No properties found matching the selected criteria.")
 
 # Feature 4: Clear Filters (Enhanced UX)
-if st.sidebar.button("Clear Filters"):
+st.sidebar.header("Potential UI/UX Improvement #3: Button to Clear Selection")
+reset_filters_button = st.sidebar.button("Clear Filters")
+if reset_filters_button:
     location = ""
     price_range = (0, 2000000)
     property_type = ""
@@ -117,7 +132,7 @@ if st.sidebar.button("Clear Filters"):
     sorted_properties = sort_and_filter_properties(filtered_properties, sort_by)
 
 # Feature 5: Export Filtered Data (Nice-to-Have)
-st.sidebar.header("Export Data")
+st.sidebar.header("Potential UI/UX Improvement #4: Export Results to File")
 if st.sidebar.button("Export Filtered Data"):
     # Assuming you want to export the filtered data to a CSV file
     export_filename = "filtered_property_data.csv"
