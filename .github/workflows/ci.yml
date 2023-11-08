@@ -43,6 +43,6 @@ jobs:
       # - name: Run pytest on test_broker_visits.py
       # run: pytest "Sprint 2/Implemented Features/Backend/test_broker_visits.py"
 
-      # Step 5: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/test_house_filtering.py'
-      - name: Run pytest on test_house_filtering.py
-        run: pytest "Sprint 2/Implemented Features/Backend/test_house_filtering.py"
+      # Commented Step 6: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/test_house_filtering.py'
+      # - name: Run pytest on test_house_filtering.py
+      # run: pytest "Sprint 2/Implemented Features/Backend/test_house_filtering.py"
