@@ -1,6 +1,6 @@
 # Sprint 3 - Task Breakdown Meeting
 
-**Date:** 11/08/23
+**Date:** 11/02/23
 
 **Time:** 6:30 PM - 8:30 PM
 
@@ -31,20 +31,17 @@ We have two major tasks and they are divided amongst the users using
    - *Create Promise to Purchase Form (Sadee):* Sadee will create a comprehensive form for brokers to submit promise to purchase details.
    - *Automatic Filling Mechanism (Grecia):* Grecia will develop an automatic filling mechanism for the property address when a broker selects a property.
    - *Ensure Form Captures and Saves Details (Shah, Grecia):* Shah and Grecia will collaborate to ensure the promise to purchase form captures and securely saves all submitted details.
-Sadee- Write 2 acceptance tests for the user stories identified in the second sprint.  Remember to label them as “acceptance test” (AT) and link them to a user story->task.
+     
+3. **Write 2 acceptance tests for and link them to a user story->task(*Sadee*)**
 
-We then finalized that 
 ### Action Plans
 
 - **Implementation Approach:**
-  - Team members will follow an iterative development approach, regularly syncing their progress with whoever's tasks are linked together.e.g Yimika & Minh have a task that is colloborative. On the same end, Shah and yimika also need to work togtehrr regarding clarity of the project and imbedding with the websites already available features from previous sprints.
-  - ** for guidance on how this should look- features, Yimika intiated the templates of the Centris website for houses.
+  - Team members will iteratively implemement core features, while syncing progress for linked tasks and eventually with groundwork from other sprints. 
 
-## Conclusion
+### Conclusion and Next Steps
 
-The task has be broken down, each individialu knows what is to be worked on as well as who they need to work with. An upcoming meeting was scheduled for November 8, 2023, to follow up on the teams progress with the implmentations. After everones work is done and zpproved, we plan on sporint 4, preparation for sprint 3 demo as well as submission plans. One on one communications may progress on the discord call and if necessary communications between the team memebers mahy be announced before the next scheduled meeting to ensure everyone is following up with thier requirements.
-
-## Conclusion
+Tasks are well-distributed, and an upcoming meeting on November 8, 2023, will assess progress. Upon approval, we'll proceed to Sprint 4, prepare for the Sprint 3 demo, and establish submission plans. One-on-one Discord calls and additional communications may be announced if needed to ensure task diligence.
 
 
 *Meeting minutes recorded by Oyeyimika.*
