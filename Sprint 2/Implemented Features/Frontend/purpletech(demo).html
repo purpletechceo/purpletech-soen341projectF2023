@@ -6,7 +6,6 @@
   <title>Navigation with Login</title>
   <link rel="stylesheet" href="mainpage1.css">
   <style>
-    
   </style>
 </head>
 <body>
@@ -18,9 +17,21 @@
     <div class="nav-links">
       <a href="#">Find a Home</a>
       <a href="#">Create a listing</a>
-      <a href="#">Support</a>
-      <a href="#">About Us</a>
-      <a href="login.html" target="_blank">Login</a>
+      <a href="#" target="_blank">Add Broker</a>
+      <a href="#" target="_blank">See Brokers</a>
+      <div class="profile-logo" onclick="toggleProfileDropdown()">
+        <img src="image/loginicon.png" alt="Profile Picture" class="profile-picture">
+        <span class="company-name"></span>
+        <div class="profile-dropdown">
+          <!-- Content for the profile dropdown -->
+          <a href="login.html" target="_blank">Login</a>
+          <a href="#" target="_blank">Sign up</a>
+          <div class="divider-line"></div>
+          <a href="#" target="_blank">Get Help</a>
+          <a href="#" target="_blank">About Us</a>
+          <!-- Add more dropdown items if needed -->
+        </div>
+      </div>
     </div>
   </nav>
   
@@ -154,6 +165,13 @@
         document.head.appendChild(script);
       }
       loadMapScript();
+    </script>
+     <script>
+      function toggleProfileDropdown() {
+        var profileLogo = document.querySelector('.profile-logo');
+        profileLogo.classList.toggle('active');
+      }
+      
     </script>
   </body>
 </html>
