@@ -39,5 +39,18 @@ if len(filtered_df) > 0:
         license_number = selected_row['License Number']
         agency = selected_row['Agency']
         image_url = selected_row['ImageURL']
+  
+        # Display broker information
+        st.title("Broker's Profile")
+        st.write(f"Name: {first_name} {last_name}")
+        st.write(f"Phone: {phone}")
+        st.write(f"Email: {email}")
+        st.write(f"License Number: {license_number}")
+        st.write(f"Agency: {agency}")
         
+        # Display the image
+        st.image(image_url, caption='Selected Image', use_column_width=True)
+else:
+    st.write("No brokers match the search criteria.")
+
 
