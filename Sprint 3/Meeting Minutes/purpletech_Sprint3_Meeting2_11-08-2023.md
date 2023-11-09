@@ -10,9 +10,11 @@
 
 ## Agenda
 -Discussion on core features to be implemented during the sprint.
--Documenting user stories
--Task Assignment
--Meetings with paired members 
+
+-Documenting user stories.
+
+-Task Assignment & Meetings with paired members. 
+
 -Upcoming meeting for review of the new features with a plan to write plan for sprint 4.
 
 ### Discussion
