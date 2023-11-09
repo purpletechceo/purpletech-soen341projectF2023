@@ -1,43 +1,79 @@
-/* Reset default styles */
+/* Webkit (Safari, Chrome) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+*::-moz-scrollbar {
+  display: none;
+}
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f2f2f2;
   margin: 0;
-  background-image: url('/image/image.webp'); /* Replace 'your-image-file.jpg' with the actual path to your image */
-  background-size: cover; /* This will make the image cover the entire background */
-  background-attachment: fixed; /* This will make the image fixed, so it won't scroll with the page content */
+  background-image: url('image/image.webp');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-
-
 nav {
-  background-color: rgba(168, 168, 141, 0.7); /* Beige background with transparency */
-  color: #fff; /* White text color */
+  background-image: linear-gradient(to left, rgb(122, 108, 126), #998d9c, #b4a7b7);
+  background-color:  rgba(167, 153, 183, 1);
+  color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- /* Make the navigation bar fixed */
-  width: 97.9%; /* Stretch it across the screen */
+  width: 100%;
   top: 0;
-  transition: background-color 0.3s; /* Add a smooth transition effect */
+  transition: background-color 0.3s;
   white-space: nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .nav-scrolled {
-  background-color: #f5f5dc; /* Beige background when scrolled */
+  background-color: #f5f5dc;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  transition: color 0.3s;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 10px;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background-color:  rgba(224, 164, 88, 1);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Add margin for spacing */
+  margin-right: 40px;
 }
 
 .logo img {
@@ -51,56 +87,117 @@ nav {
   font-size: 24px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 40px; /* Increase the gap for spacing */
-}
 
-.nav-links a {
-  text-decoration: none;
-  color: #fff; /* White text color */
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #66D9EF; /* Light blue on hover */
-}
-
-.dropdown {
-  margin-left: auto; /* Add margin for spacing to the right */
-}
-
-.dropdown a {
-  text-decoration: none;
-  color: #fff; /* White text color */
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.dropdown a:hover {
-  color: #66D9EF; /* Light blue on hover */
-}
-
-.map-container {
-  height: 50%; /* Reduce the height as needed */
-  width: 40%; /* Reduce the width as needed */
-  border: 2px solid #000; /* Add a border if needed */
-  position: absolute;
-  top: 25%; /* Adjust the top position to leave space for the navigation bar */
-  left: 30%; /* Adjust the left position to center the map horizontally */
-  z-index: 1; /* Set a higher z-index value to bring it to the front */
-  background-color: rgba(255, 255, 255, 0.7); /* Add a white background with transparency to the map container */
-}
 .house-list {
   display: flex;
-  width: 40%; /* Width for the house list */
-  background-color: rgba(255, 255, 255, 0.7);
+  width: 40%;
   padding: 20px;
-  box-sizing: border-box;
 }
-/* Additional styling for property card content */
+
 .property-card-content {
-  flex: 1; /* Allow content to expand and fill available space */
+  flex: 1;
   padding: 10px;
+}
+.property-card-content >h2{
+  font-size: 30px;
+}
+.property-card-content >p,a{
+  font-size: 25px;
+}
+.property-card {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.property-card img {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+}
+
+.property-card-content {
+  padding: 10px;
+}
+
+.house-list {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.purchase-button {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.purchase-button:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.purchase-button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.purchase-button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.purchase-button:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.purchase-button:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.purchase-button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.purchase-button:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.purchase-button:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
