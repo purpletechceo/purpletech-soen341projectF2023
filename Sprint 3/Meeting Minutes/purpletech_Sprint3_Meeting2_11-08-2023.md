@@ -18,7 +18,7 @@
 -Upcoming meeting for review of the new features with a plan to write plan for sprint 4.
 
 ### Discussion
-The team met up to discuss the task for sprint 3. allaye initiated this. we started off with the sprint description. we then looked into making them acceptance stories then user stories.  the task breakdown happened as followed depending on each person:
+The team convened to discuss the tasks for Sprint 3, with Allaye leading the initiative. We began by reviewing the sprint description and proceeded to refine tasks into acceptance stories and user stories. The subsequent task breakdown was tailored to individual team members:
 
 ### Task Breakdown and Discussion
 We have two major tasks and they are divided amongst the users using 
