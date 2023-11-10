@@ -68,8 +68,8 @@ property_type = st.sidebar.selectbox("Property Type", ["House", "Apartment", "Co
 bedrooms = st.sidebar.selectbox("Bedrooms", [1, 2, 3, 4, 5])
 
 # Feature 2: Interactive Maps using Google Maps
-st.header("Spring 3-4: Potential Nice-to-Have Features")
-st.write("As ")
+st.header("Upcoming Sprint 4: Potential Nice-to-Have Features")
+st.write("Exploring potential nice-to-have features")
 st.header("Property Listings on Map")
 
 # Display the map with property markers (updated to show filtered properties)
