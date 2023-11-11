@@ -18,7 +18,7 @@
 - Action Items Discussion
 
 ### Progress Review
-The discussion started with the tasks for Sprint 3, Yimika and Allaye mentioned their tasks were completed and have been reviewed by their team member Shah who was yet to embed the features since all tasks were not completed. The other team members followed with updates on their different tasks.
+The discussion started with the tasks for Sprint 3, Yimika and Allaye showed their tasks were completed and was sent Shah who was yet to embed the features since all tasks were not completed. The other team members followed with updates on their different tasks.
 
 ### CI Pipeline Progress
 
@@ -30,16 +30,15 @@ Sadee updated the team on the Promise Purchase user story. Challenges faced duri
 
 ### Minh's Presentation on Broker Display
 
-Minh delivered a presentation on the UI approach for displaying brokers. Feedback from the team was provided to enhance the overall user experience. Minh committed to incorporating the feedback and presenting an updated version for review.
+Minh delivered a presentation on the UI approach for displaying brokers. Feedback from the team was provided to enhance the overall user experience (including maps to get the available housing around an area). Minh committed to incorporating the feedback and presenting an updated version for review.
 
 ### Final Integration and Broker Search
 
-Shah presented the importance of the final integration phase and discussed the agreed-upon criteria for broker selection. The team actively participated in refining the criteria for a seamless broker search experience.
+Shah will implement the final integration phase and discussed the agreed-upon criteria for broker selection.
 
 ### Mortgage Calculator and Sprint 4 Planning
 
 The team engaged in a planning discussion for the development of the Mortgage Calculator. Potential user stories for Sprint 4 were explored, and a plan was outlined for their implementation.
-
 
 ## Action Items
 
@@ -52,7 +51,6 @@ The team engaged in a planning discussion for the development of the Mortgage Ca
 
 ### Conclusion and Next Steps
 
-Asides froma a few challenges yet to be resolved, asks are well-distributed, and an upcoming meeting on November 8, 2023, will assess progress. The plan for Sprint 4, prepare for the Sprint 3 demo, and establish submission plans. One-on-one Discord calls and additional communications may be announced if needed to ensure task diligence.
-
+In this progress review, the team discussed core features. Grecia leads the CI pipeline and mortgage calculator, Sadee collaborates on the Promise Purchase story, Minh refines the broker display, and Shah oversees final integration. Finalization is scheduled for the last meeting on November 9th, with one-on-one Discord calls for additional communication if needed.
 
 *Meeting minutes recorded by Oyeyimika Adeoye.*
