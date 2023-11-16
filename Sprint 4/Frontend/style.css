@@ -8,7 +8,6 @@
   height: 60%; /* Reduce the height as needed */
   width: 40%; /* Reduce the width as needed */
   margin-left: 20%;
-  border: 2px solid #000; /* Add a border if needed */
   position: absolute;
   top: 25%; /* Adjust the top position to leave space for the navigation bar */
   left: 30%; /* Adjust the left position to center the map horizontally */
