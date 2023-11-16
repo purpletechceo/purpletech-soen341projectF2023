@@ -1,9 +1,10 @@
 # Project Dependencies 
-pandas
+folium
 numpy
+matplotlib
+pandas
 streamlit
 streamlit-aggrid
-folium
 
 # Development Dependencies for Testing Purposes
 flake8
