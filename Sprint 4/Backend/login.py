@@ -9,7 +9,7 @@ user_data = pd.read_csv("userdata.csv")
 current_user_file = "current_user.csv"
 
 # Main application
-st.title("Simple Login Application")
+st.title("Login")
 
 # Username and password input fields
 username = st.text_input("Username")
