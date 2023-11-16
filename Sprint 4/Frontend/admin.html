@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Broker</title>
+    <title>List Broker Admin</title>
     <style>
         body {
-            background-image: url("image/loginimage.jpg");
-            background-size: cover; /* Make the background image cover the entire page */
-            background-position: center; /* Center the background image */
-            background-attachment: fixed; /* Fixed background image */
+            background-image: url("image/admin.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
             display: flex;
@@ -22,13 +22,19 @@
         }
 
         iframe {
-            
-            width: 95%;
-            height: 95%;
-            border: none; /* Remove iframe border */
-            border-radius: 10px; /* Add round border */
-            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2); /* Add a small shadow */
+            width: 70vw;
+            height: 70vh;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             opacity: 0.9;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-color: #fff; /* Add a background color */
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>

@@ -8,33 +8,59 @@
     <title>List Broker</title>
     <style>
         body {
-            background-image: url("image/loginimage.jpg");
-            background-size: cover; /* Make the background image cover the entire page */
-            background-position: center; /* Center the background image */
-            background-attachment: fixed; /* Fixed background image */
+            background: url("image/prop.jpeg");
+            background-size: cover;
+    
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0; /* Optional background color */
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        #container {
+            text-align: center;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            opacity: 0.95;
+            
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: rgb(104, 81, 110);
         }
 
         iframe {
-            
-            width: 95%;
-            height: 95%;
-            border: none; /* Remove iframe border */
-            border-radius: 10px; /* Add round border */
-            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2); /* Add a small shadow */
-            opacity: 0.9;
+            opacity: 1;
+            width: 80vw;
+            height: 87vh;
+            border: none;
         }
+
+        p {
+            margin: 20px;
+            color: #777;
+        }
+        h1 img {
+            margin-right: 10px; /* Adjusted margin for spacing between the logo and text */
+            height: 30px; /* Adjusted height of the logo */
+            /* Add any additional styling for the logo */
+        }
+
     </style>
 </head>
 
 <body>
-    <iframe src="http://localhost:8501"></iframe>
+    <div id="container">
+        <h1><img src="image/purple.png" alt="Logo">List of Property</h1>
+        <iframe src="http://localhost:8501"></iframe>
+    </div>
 </body>
 
 </html>

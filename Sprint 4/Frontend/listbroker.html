@@ -8,33 +8,141 @@
     <title>List Broker</title>
     <style>
         body {
-            background-image: url("image/loginimage.jpg");
-            background-size: cover; /* Make the background image cover the entire page */
-            background-position: center; /* Center the background image */
-            background-attachment: fixed; /* Fixed background image */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0; /* Optional background color */
+            background-image: url("image/vivid-blurred-colorful-background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
         }
 
+        /* Overlay to create a translucent effect on the background image */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -2; /* Adjusted z-index value */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        header.expanded {
+            transform: translateY(-80vh);
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            z-index: -1;
+            opacity: 0.7;
+        }
         iframe {
-            
-            width: 95%;
-            height: 95%;
-            border: none; /* Remove iframe border */
-            border-radius: 10px; /* Add round border */
-            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2); /* Add a small shadow */
-            opacity: 0.9;
+            display: none;
+            width: 80vw;
+            height: 90vh;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            background: #fff;
+            transition: opacity 5s ease-in-out;
+        }
+        iframe.visible {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 1;
+            transition: opacity 8s ease-in-out;
+        }
+
+        iframe.faded {
+            transition: opacity 2s ease; /* Shorter fade-in transition after the delay */
+        }
+
+        body.expanded iframe {
+            transition: opacity 8s ease-in-out; /* Adjusted duration for the expanded state */
         }
     </style>
 </head>
 
 <body>
-    <iframe src="http://localhost:8506"></iframe>
+    <header>
+    <h1>Welcome to the Broker List</h1>
+    <p>Explore our list of brokers and find the perfect match for your needs.</p>
+    <button id="toggleButton">Explore Brokers</button>
+</header>
+    <iframe id="brokerFrame" src="http://localhost:8506"></iframe>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var iframe = document.getElementById('brokerFrame');
+        var toggleButton = document.getElementById('toggleButton');
+        var header = document.querySelector('header');
+
+        toggleButton.addEventListener('click', function () {
+            // Toggle the fade-out effect on the header
+            header.classList.toggle('expanded');
+
+            // Toggle the visibility class on the iframe after a delay
+            setTimeout(function () {
+                iframe.classList.toggle('visible');
+            }, 1000); // Adjust the delay as needed (500ms for 0.5 seconds)
+
+            // Toggle the fade-in effect on the iframe after a delay
+            setTimeout(function () {
+                iframe.classList.toggle('faded');
+            }, 2000); // Adjust the delay as needed (1000ms for 1 second)
+        });
+    });
+    </script>
 </body>
 
 </html>
