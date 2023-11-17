@@ -70,7 +70,7 @@ if st.button("Calculate"):
         months = num_years * 12
         weekly_payment = monthly_payment * 12 / 52
         accelerated_weekly_payment = monthly_payment / 4
-        bi_weekly_payment = monthly_payment / 2  # Corrected variable name
+        bi_weekly_payment = monthly_payment / 2
         monthly_payment = monthly_payment
         quarterly_payment = monthly_payment * 3
         annual_payment = monthly_payment * 12
@@ -82,33 +82,29 @@ if st.button("Calculate"):
         })
 
         # Create a dashboard layout
-        st.subheader("Payment Schedule")
+        st.header("Payment Schedule")
         st.table(payment_scenarios.set_index('Payment Type').style.format({'Amount': '${:.2f}'}))
-        
-        # Amortization Schedule
-        st.subheader("Amortization Schedule")
-        st.text("Amortization built based on a monthly payment basis.")
 
+        # Amortization Schedule
+        st.header("Amortization Schedule")
+        st.text("Amortization built based on a monthly payment basis.")
+        
         # Initialize amortization_data as an empty list
         amortization_data = []
-
+        
         # Initialize interest_paid_list and principal_paid_list
         interest_paid_list = []
         principal_paid_list = []
 
         # Initialize current_year here
-        current_year = 1
-
+        current_year = 1  
+        
         # Initialize balance_list with the initial principal
         balance_list = [principal]
-
+        
         # Calculate monthly_interest_rate before entering the loop
-        monthly_interest_rate = annual_interest_rate / 12 / 100
+        monthly_interest_rate = annual_interest_rate / 12 / 100  
 
-        # Create a dictionary to store amortization data for each year
-        amortization_years = {}
-
-        # Create the amortization data
         for month in range(1, months + 1):
             interest_paid = balance_list[-1] * monthly_interest_rate
             principal_paid = monthly_payment - interest_paid
@@ -120,6 +116,7 @@ if st.button("Calculate"):
 
             # Add data to the amortization_data list
             amortization_data.append({
+                "Year": current_year,
                 "Month": month,
                 "Payment": monthly_payment,
                 "Principal Paid": principal_paid,
@@ -128,24 +125,27 @@ if st.button("Calculate"):
             })
 
             if month % 12 == 0:
-                # Create a DataFrame for the amortization data of the current year
-                year_data = pd.DataFrame(amortization_data)
-                year_data.set_index("Month", inplace=True)  # Set "Month" as the index for the year's data
-                amortization_years[current_year] = year_data  # Store the year's data in the dictionary
                 current_year += 1  # Update current_year for the next year
-                amortization_data = []  # Reset amortization_data for the next year
 
-        # Display the amortization data using expanders for each year
-        for year in amortization_years:
+        # Create a dictionary to store amortization data for each year
+        amortization_years = {}
+
+        # Separate the data for each year
+        for year in range(1, num_years + 1):
+            year_data = [data for data in amortization_data if data["Year"] == year]
+            amortization_years[year] = pd.DataFrame(year_data)
+
+        # Create an expander for each year
+        for year in range(1, num_years + 1):
             with st.expander(f"Year {year}"):
                 year_data = amortization_years[year]
-                st.table(year_data.style.format({
+                st.table(year_data[['Month', 'Payment', 'Principal Paid', 'Interest Paid', 'Remaining Balance']].set_index('Month').style.format({
                     "Payment": "${:.2f}",
                     "Principal Paid": "${:.2f}",
                     "Interest Paid": "${:.2f}",
                     "Remaining Balance": "${:.2f}"
                 }))
-
+        
         st.subheader("Summary")
         # Visualize the amortization data with green-themed graphs
         # Scatter plot for Principal Paid vs. Month
@@ -157,7 +157,7 @@ if st.button("Calculate"):
 
         # Horizontal bar chart for Remaining Balance by Year
         remaining_balance = [data['Remaining Balance'] for data in amortization_data]
-        year = [(data['Month'] - 1) // 12 + 1 for data in amortization_data]
+        year = [data['Year'] for data in amortization_data]
 
         # Create a plot chart to compare loan options
         loan_terms = list(loan_options.keys())
@@ -165,8 +165,8 @@ if st.button("Calculate"):
 
         # Create columns for layout
         col1, col2 = st.columns(2)
-        
-        # Column 1
+
+        # Column 1: 
         with col1:
             st.subheader("Principal Paid vs. Month")
             plt.figure(figsize=(8, 4))
@@ -186,7 +186,7 @@ if st.button("Calculate"):
             plt.title('Principal Paid vs. Year')
             st.pyplot(plt)
 
-        # Column 2
+        # Column 2: 
         with col2:
             st.subheader("Histogram of Interest Paid")
             plt.figure(figsize=(8, 4))
@@ -203,12 +203,12 @@ if st.button("Calculate"):
             plt.ylabel('Year')
             plt.title('Horizontal Bar Chart of Remaining Balance by Year')
             st.pyplot(plt)
-
-        st.subheader("Scenario Analyzer for Loan Term Comparisons")
+        
+        st.subheader("Loan Term Options Comparison")
         st.caption(f"In addition to your selection, Purple Tech offers various plans.") 
         st.caption("The following chart displays how much you would pay monthly accordingly.")
         st.caption(f"Remember that for User Selection, you chose {loan_term_years} years.")
-                
+        
         plt.figure(figsize=(8, 4))
         bars = plt.bar(loan_terms, monthly_payments, color=['#EE82EE' if loan_term == 'User Selection' else '#800080' for loan_term in loan_terms])
         plt.xlabel('Loan Type')
@@ -224,3 +224,5 @@ if st.button("Calculate"):
         # Provide guidance on selecting the best option
         best_option = min(loan_options, key=lambda x: calculate_mortgage(principal, loan_options[x]["interest_rate"], loan_term_years))
         st.success(f"To minimize your monthly payment, you may consider the '{best_option}' option, which would result in a lower monthly payment compared to other options.")
+            
+            
