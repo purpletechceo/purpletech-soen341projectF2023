@@ -5,6 +5,13 @@ import pandas as pd
 
 # Function to calculate the monthly mortgage payment
 def calculate_mortgage(principal, annual_interest_rate, num_years):
+    if principal <= 0:
+        raise ValueError("Principal amount must be greater than zero")
+    if num_years <= 0:
+        raise ValueError("Loan term must be a positive number of years")
+    if annual_interest_rate <= 0:
+        raise ValueError("Annual interest rate must be greater than zero")
+
     if annual_interest_rate == 0:
         return principal / (num_years * 12)
 
