@@ -197,7 +197,7 @@ if getattr(st.session_state, 'logged_in', False):
                         })
 
                     save_to_csv(purchase_data, "purchaseinfomain.csv")
-                    st.success("Data saved and concatenated to broker_requests.csv")
+                    st.success("Data saved and concatenated to purchaseinfomain.csv")
 
 
 

@@ -1,0 +1,17 @@
+Broker Name,License Number,Agency Name,Buyer Name,Buyer Current Address,Buyer Email,Immovable Address,Price Offered,Deed of Sale Date,Occupancy Date,username
+broker1,123456,ABC Realty,John Doe,123 Main St,john.doe@example.com,House 1,500000,2023-12-15,2023-12-20,broker2
+broker2,789012,XYZ Properties,Jane Smith,456 Elm St,jane.smith@example.com,House 2,550000,2023-12-18,2023-12-25,broker1
+broker2,789012,XYZ Properties,Michael Johnson,789 Oak St,michael.j@example.com,House 3,600000,2023-12-20,2023-12-28,broker1
+broker1,123456,ABC Realty,Amy Brown,101 Pine St,amy.b@example.com,23 Marsh Rd,480000,2023-12-14,2023-12-22,broker2
+broker1,123456,ABC Realty,David Lee,202 Cedar St,david.lee@example.com,55 Cook Ave,420000,2023-12-12,2023-12-18,broker2
+broker1,123456,ABC Realty,Linda Wilson,303 Maple St,linda.w@example.com,98 Bairstow Blvd,470000,2023-12-16,2023-12-23,broker2
+broker1,123456,ABC Realty,Kevin Adams,404 Birch St,kevin.a@example.com,44 Trent Rd,490000,2023-12-17,2023-12-24,broker2
+broker1,123456,ABC Realty,Susan Clark,505 Walnut St,susan.c@example.com,78 Archer Blvd,520000,2023-12-19,2023-12-26,broker2
+broker2,789012,XYZ Properties,Christopher Hall,606 Spruce St,chris.h@example.com,3000 Blvd Guy,680000,2023-12-25,2023-12-31,broker1
+broker2,789012,XYZ Properties,Emily White,707 Cherry St,emily.w@example.com,2245 Root Ave,620000,2023-12-23,2023-12-29,broker1
+broker2,789012,XYZ Properties,Andrew Miller,808 Pineapple St,andrew.m@example.com,30 Rabada Rd,550000,2023-12-21,2023-12-27,broker1
+broker2,789012,XYZ Properties,Jennifer Martinez,909 Banana St,jennifer.m@example.com,41 Keegan Blvd,510000,2023-12-18,2023-12-26,broker1
+broker3,345678,DEF Realtors,Robert Harris,1212 Orange St,robert.h@example.com,66 Butler Rd,450000,2023-12-10,2023-12-17,broker1
+broker3,345678,DEF Realtors,Laura Davis,1313 Grape St,laura.d@example.com,57 Dussen Rd,490000,2023-12-15,2023-12-22,broker1
+broker3,345678,DEF Realtors,Mark Wilson,1414 Watermelon St,mark.w@example.com,21 Miller Ave,530000,2023-12-20,2023-12-28,broker1
+broker3,345678,DEF Realtors,Amy Johnson,1515 Blueberry St,amy.j@example.com,901 Jansen Ave,600000,2023-12-28,2024-01-03,broker1
