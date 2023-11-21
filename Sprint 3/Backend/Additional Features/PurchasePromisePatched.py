@@ -3,7 +3,6 @@ import pandas as pd
 from st_aggrid import AgGrid, GridUpdateMode, ColumnsAutoSizeMode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 
-
 # Read user data from 'userdata.csv' file
 user_data = pd.read_csv('userdata.csv')
 
@@ -13,8 +12,6 @@ user_passwords = dict(zip(user_data['username'], user_data['password']))
 # Load data from data.csv file
 df = pd.read_csv('data.csv')
 # Load visits data from 'visits.csv' file
-
-
 
 # Create a copy of the DataFrame without the 'email' column
 df_filtered = df[['house address', 'house type', 'number of rooms', 'number of bathrooms', 'image','username', 'status', 'location']]
@@ -28,14 +25,11 @@ gridoptions = gd.build()
 # Initialize the visit request DataFrame
 visit_request_df = pd.DataFrame(columns=["b_email", "property", "fname", "lname", "pnumber", "email", "date_time"])
 
-
 selected_tab = st.sidebar.radio("Select a tab:", ["View Data", "CRUD Operations", "Your Listings", "Administrator"], key="tab_selection")
 
 # User login interface
 username = st.sidebar.text_input("Username")
 password = st.sidebar.text_input("Password", type='password')
-
-
 
 # Authentication logic
 if st.sidebar.button("Login"):
@@ -380,7 +374,6 @@ if getattr(st.session_state, 'logged_in', False):
 else:
     # If not logged in, do not display other tabs
     st.warning("Please log in to access the application.")
-
 
     # Boilerplate code for hiding Streamlit style
     hide_streamlit_style = """
