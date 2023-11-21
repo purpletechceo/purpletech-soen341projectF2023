@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation with Login</title>
+  <link rel="stylesheet" href="mainpage1.css">
+  <style>
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="image/purple.png" alt="Logo">
+      <span class="company-name">PurpleTech</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Find a Home</a>
+      <a href="#">Create a listing</a>
+      <a href="#" target="_blank">Add Broker</a>
+      <a href="listbroker.html" target="_blank">See Brokers</a>
+      <div class="profile-logo" onclick="toggleProfileDropdown()">
+        <img src="image/loginicon.png" alt="Profile Picture" class="profile-picture">
+        <span class="company-name"></span>
+        <div class="profile-dropdown">
+          <!-- Content for the profile dropdown -->
+          <a href="login.html" target="_blank">Login</a>
+          <a href="#" target="_blank">Sign up</a>
+          <div class="divider-line"></div>
+          <a href="#" target="_blank">Get Help</a>
+          <a href="#" target="_blank">About Us</a>
+          <!-- Add more dropdown items if needed -->
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div id="mapCanvas" class="map-container"></div>
+    <div class="house-list">
+      <div class="property-card">
+        <img src="image/house1.avif" alt="Property 1">
+        <div class="property-card-content">
+          <h2>Luxury Villa</h2>
+          <p>Spacious villa with a stunning view of the city. Ideal for high-end living.</p>
+          <p class="price">$5,000,000</p>
+          <button class="purchase-button"onclick="purchaseProperty(0)">Purchase</button>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="image/house2.jfif" alt="Property 2">
+        <div class="property-card-content">
+          <h2>Penthouse Suite</h2>
+          <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
+          <p class="price">$3,500,000</p>
+          <button class="purchase-button" onclick="purchaseProperty(1)">Purchase</button>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="image/house2.jfif" alt="Property 2">
+        <div class="property-card-content">
+          <h2>Penthouse Suite</h2>
+          <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
+          <p class="price">$3,500,000</p>
+          <button class="purchase-button" onclick="purchaseProperty(1)">Purchase</button>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="image/house2.jfif" alt="Property 2">
+        <div class="property-card-content">
+          <h2>Penthouse Suite</h2>
+          <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
+          <p class="price">$3,500,000</p>
+          <button class="purchase-button" onclick="purchaseProperty(1)">Purchase</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxSZNkP2LfRGugbh_FF9V35ioz3hEAD1U&callback=initMap&libraries=places&v=beta" async defer
+    onload="initializeMap()"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+    <script>
+      var markers = []; // Declare markers array in the global scope
+    var map; // Declare map variable in the global scope
+
+    function initializeMap() {
+      var mapOptions = {
+        center: { lat: 45.52926654736483, lng: -73.61626559143937 },
+        zoom: 12
+      };
+
+      map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
+
+      markers = [
+        ['Test 1', 45.521381991950946, -73.59596969723579],
+        ['Test 2', 45.493429319573046, -73.56609726472979],
+        ['Test 3', 45.49703919653888, -73.56858635466092],
+        ['Test 4', 45.51694952508555, -73.55940247101793]
+      ];
+
+      var infoWindowContent = [
+        '<div class="info_content">' +
+        '<h2>Test 1</h2>' +
+        '<p>Description for Test 1</p>' +
+        '</div>',
+
+        '<div class="info_content">' +
+        '<h2>Test 2</h2>' +
+        '<p>Description for Test 2</p>' +
+        '</div>',
+
+        '<div class="info_content">' +
+        '<h2>Test 3</h2>' +
+        '<p>Description for Test 3</p>' +
+        '</div>',
+
+        '<div class="info_content">' +
+        '<h2>Test 4</h2>' +
+        '<p>Description for Test 4</p>' +
+        '</div>'
+      ];
+
+      var bounds = new google.maps.LatLngBounds();
+      var infoWindow = new google.maps.InfoWindow(), marker;
+
+      for (var i = 0; i < markers.length; i++) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: markers[i][0]
+        });
+
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+          return function () {
+            infoWindow.setContent(infoWindowContent[i]);
+            infoWindow.open(map, marker);
+          };
+        })(marker, i));
+      }
+
+      map.fitBounds(bounds);
+
+      var boundsListener = google.maps.event.addListener(map, 'bounds_changed', function (event) {
+        this.setZoom(14);
+        google.maps.event.removeListener(boundsListener);
+      });
+    }
+
+    function purchaseProperty(markerIndex) {
+      map.panTo(new google.maps.LatLng(markers[markerIndex][1], markers[markerIndex][2]));
+      google.maps.event.trigger(markers[markerIndex], 'click');
+      console.log('Purchase property for marker index: ', markerIndex);
+  }
+    
+      // Ensure the API is loaded before calling initializeMap
+      function loadMapScript() {
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCxSZNkP2LfRGugbh_FF9V35ioz3hEAD1U&libraries=places&v=beta&callback=initializeMap';
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+      }
+      loadMapScript();
+    </script>
+     <script>
+      function toggleProfileDropdown() {
+        var profileLogo = document.querySelector('.profile-logo');
+        profileLogo.classList.toggle('active');
+      }
+      
+    </script>
+  </body>
+</html>
