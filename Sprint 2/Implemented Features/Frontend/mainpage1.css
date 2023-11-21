@@ -1,0 +1,106 @@
+/* Reset default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  background-image: url('/image/image.webp'); /* Replace 'your-image-file.jpg' with the actual path to your image */
+  background-size: cover; /* This will make the image cover the entire background */
+  background-attachment: fixed; /* This will make the image fixed, so it won't scroll with the page content */
+}
+
+
+
+nav {
+  background-color: rgba(168, 168, 141, 0.7); /* Beige background with transparency */
+  color: #fff; /* White text color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ /* Make the navigation bar fixed */
+  width: 97.9%; /* Stretch it across the screen */
+  top: 0;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+  white-space: nowrap;
+}
+
+.nav-scrolled {
+  background-color: #f5f5dc; /* Beige background when scrolled */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add margin for spacing */
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; /* Increase the gap for spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* White text color */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #66D9EF; /* Light blue on hover */
+}
+
+.dropdown {
+  margin-left: auto; /* Add margin for spacing to the right */
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #fff; /* White text color */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.dropdown a:hover {
+  color: #66D9EF; /* Light blue on hover */
+}
+
+.map-container {
+  height: 50%; /* Reduce the height as needed */
+  width: 40%; /* Reduce the width as needed */
+  border: 2px solid #000; /* Add a border if needed */
+  position: absolute;
+  top: 25%; /* Adjust the top position to leave space for the navigation bar */
+  left: 30%; /* Adjust the left position to center the map horizontally */
+  z-index: 1; /* Set a higher z-index value to bring it to the front */
+  background-color: rgba(255, 255, 255, 0.7); /* Add a white background with transparency to the map container */
+}
+.house-list {
+  display: flex;
+  width: 40%; /* Width for the house list */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* Additional styling for property card content */
+.property-card-content {
+  flex: 1; /* Allow content to expand and fill available space */
+  padding: 10px;
+}
