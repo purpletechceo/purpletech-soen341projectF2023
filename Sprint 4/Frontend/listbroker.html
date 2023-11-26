@@ -6,33 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Broker</title>
+    <link rel="stylesheet" href="nav.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url("image/vivid-blurred-colorful-background.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-        /* Overlay to create a translucent effect on the background image */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: -2; /* Adjusted z-index value */
-        }
         header {
+            padding-top: 10%;
             text-align: center;
             margin-bottom: 30px;
             transition: transform 0.5s ease-in-out;
@@ -58,17 +35,8 @@
         button:hover {
             background-color: #c0392b;
         }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            color: #fff;
-        }
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #fff;
-        }
+       
         button::before {
             content: "";
             position: absolute;
@@ -110,16 +78,37 @@
         body.expanded iframe {
             transition: opacity 8s ease-in-out; /* Adjusted duration for the expanded state */
         }
+        
     </style>
 </head>
 
 <body>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <h1>PurpleTech</h1>
+                </div>
+                <div class="menu-items">
+                    <li><a href="purpletech(demo).html">Home</a></li>
+                    <li><a href="listofproperties.html">Find a Home</a></li>
+                    <li><a href="createlisting.html">Create Listing</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="login.html">login</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
     <header>
-    <h1>Welcome to the Broker List</h1>
-    <p>Explore our list of brokers and find the perfect match for your needs.</p>
     <button id="toggleButton">Explore Brokers</button>
 </header>
-    <iframe id="brokerFrame" src="http://localhost:8506"></iframe>
+    <iframe id="brokerFrame" src="http://localhost:8502"></iframe>
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
