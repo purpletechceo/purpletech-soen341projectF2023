@@ -107,6 +107,8 @@ new_num_rooms = st.text_input("Number of Rooms")
 new_num_bathrooms = st.text_input("Number of Bathrooms")
 new_image = st.text_input("Image URL")
 new_location = st.text_input("Location")
+new_sqf = st.text_input("Square Feet")
+new_price = st.text_input("Price")
 if st.button("Add New Row"):
     # Store the logged-in username in the 'username' column
     new_row = pd.DataFrame([{
@@ -116,8 +118,10 @@ if st.button("Add New Row"):
         'number of bathrooms': new_num_bathrooms,
         'image': new_image,
         'username': logged_in_user,
+        'status': 'Pending',
         'location': new_location,
-        'status': 'Pending'
+        'price': new_price,
+        'location': new_location
     }])
     df = pd.concat([df, new_row], ignore_index=True)
     df.to_csv('data.csv', index=False)
@@ -132,12 +136,22 @@ if df.at[row_to_update, 'username'] == logged_in_user:  # Check if the user crea
     update_num_bathrooms = st.text_input("Number of Bathrooms",
                                          value=df.at[row_to_update, 'number of bathrooms'])
     update_image = st.text_input("Image URL", value=df.at[row_to_update, 'image'])
+    update_location = st.text_input("location", value=df.at[row_to_update, 'location'])
+    update_price= st.text_input("price", value=df.at[row_to_update, 'price'])
+    update_squareFeet = st.text_input("square feet", value=df.at[row_to_update, 'square feet'])
     if st.button("Update Row"):
         df.at[row_to_update, 'house address'] = update_house_address
         df.at[row_to_update, 'house type'] = update_house_type
         df.at[row_to_update, 'number of rooms'] = update_num_rooms
         df.at[row_to_update, 'number of bathrooms'] = update_num_bathrooms
         df.at[row_to_update, 'image'] = update_image
+        df.at[row_to_update, 'status'] = 'Pending'
+        df.at[row_to_update, 'location'] = update_location
+        df.at[row_to_update, 'price'] = update_price
+        df.at[row_to_update, 'square feet'] = update_squareFeet
+
+
+
         df.to_csv('data.csv', index=False)
 
 
