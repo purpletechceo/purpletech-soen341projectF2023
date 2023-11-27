@@ -26,8 +26,6 @@ user_passwords = dict(zip(user_data['username'], user_data['password']))
 df = pd.read_csv('data.csv')
 # Load visits data from 'visits.csv' file
 
-
-
 # Create a copy of the DataFrame without the 'email' column
 df_filtered = df[['house address', 'house type', 'number of rooms', 'number of bathrooms', 'image','username', 'status', 'location']]
 
