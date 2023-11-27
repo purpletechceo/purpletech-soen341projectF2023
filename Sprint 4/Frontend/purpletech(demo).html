@@ -6,6 +6,13 @@
   <title>Navigation with Login</title>
   <link rel="stylesheet" href="mainpage1.css">
   <style>
+    .property-container {
+  height: 400px; /* Adjust the height as needed */
+  width: 100%;
+  overflow-y: auto;
+  padding-top: 10%;
+}
+
   </style>
 </head>
 <body>
@@ -25,10 +32,6 @@
           <!-- Content for the profile dropdown -->
           <a href="login.html" target="_blank">Login</a>
           <a href="admin.html" target="_blank">Admin</a>
-          <div class="divider-line"></div>
-          <a href="#" target="_blank">Get Help</a>
-          <a href="#" target="_blank">About Us</a>
-          <!-- Add more dropdown items if needed -->
         </div>
       </div>
     </div>
@@ -36,6 +39,7 @@
   
   
   <div id="mapCanvas" class="map-container"></div>
+  <div class="property-container">
     <div class="house-list">
       <div class="property-card">
         <img src="image/house1.avif" alt="Property 1">
@@ -56,24 +60,34 @@
         </div>
       </div>
       <div class="property-card">
-        <img src="image/house2.jfif" alt="Property 2">
+        <img src="image/house1.png" alt="Property 2">
         <div class="property-card-content">
-          <h2>Penthouse Suite</h2>
+          <h2>Town House</h2>
           <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
           <p class="price">$3,500,000</p>
-          <button class="purchase-button" onclick="purchaseProperty(1)">Purchase</button>
+          <button class="purchase-button" onclick="purchaseProperty(2)">Purchase</button>
         </div>
       </div>
       <div class="property-card">
-        <img src="image/house2.jfif" alt="Property 2">
+        <img src="image/house2.jpeg" alt="Property 2">
         <div class="property-card-content">
-          <h2>Penthouse Suite</h2>
+          <h2>Split Level</h2>
           <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
           <p class="price">$3,500,000</p>
-          <button class="purchase-button" onclick="purchaseProperty(1)">Purchase</button>
+          <button class="purchase-button" onclick="purchaseProperty(3)">Purchase</button>
+        </div>
+      </div>
+      <div class="property-card">
+        <img src="image/house3.jpg" alt="Property 2">
+        <div class="property-card-content">
+          <h2>Castle</h2>
+          <p>Exclusive penthouse with top-notch amenities and breathtaking skyline views.</p>
+          <p class="price">$3,500,000</p>
+          <button class="purchase-button" onclick="purchaseProperty(4)">Purchase</button>
         </div>
       </div>
     </div>
+  </div>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxSZNkP2LfRGugbh_FF9V35ioz3hEAD1U&callback=initMap&libraries=places&v=beta" async defer
     onload="initializeMap()"></script>
@@ -96,7 +110,8 @@
         ['Test 1', 45.521381991950946, -73.59596969723579],
         ['Test 2', 45.493429319573046, -73.56609726472979],
         ['Test 3', 45.49703919653888, -73.56858635466092],
-        ['Test 4', 45.51694952508555, -73.55940247101793]
+        ['Test 4', 45.51694952508555, -73.55940247101793],
+        ['Test 5', 45.488115, -73.597637]
       ];
 
       var infoWindowContent = [
