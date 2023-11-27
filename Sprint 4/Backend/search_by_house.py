@@ -3,6 +3,13 @@ import pandas as pd
 from st_aggrid import AgGrid, GridUpdateMode, ColumnsAutoSizeMode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 
+# Boilerplate:
+
+st.set_page_config(
+    initial_sidebar_state="expanded")
+
+
+
 #save to csv:
 
 def save_to_csv(data, filename):
@@ -84,6 +91,7 @@ with tab1:
                                              max_value=max(df_filtered['price']),
                                              value=(min(df_filtered['price']), max(df_filtered['price'])))
 
+
     # Dropdown filter for number of bathrooms
     selected_bathrooms = st.sidebar.slider('Select Number of Bathrooms',
                                            min_value=min(df_filtered['number of bathrooms']),
@@ -92,32 +100,39 @@ with tab1:
                                                   max(df_filtered['number of bathrooms'])))
 
     # Filter the DataFrame based on user selections
+    # Filter the DataFrame based on user selections
     if selected_house != 'All' and selected_location != 'All':
         filtered_df = df_filtered[
-            (df_filtered['house type'] == selected_house) & (df_filtered['location'] == selected_location) & (
-                df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
+            (df_filtered['house type'] == selected_house) & (df_filtered['location'] == selected_location) &
+            (df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
             (df_filtered['square feet'].between(selected_square_feet[0], selected_square_feet[1])) &
-            (df_filtered['price'].between(selected_price_range[0], selected_price_range[1]))
+            (df_filtered['price'].between(selected_price_range[0], selected_price_range[1])) &
+            (df_filtered['number of bathrooms'].between(selected_bathrooms[0], selected_bathrooms[1]))
             ]
     elif selected_house != 'All':
-        filtered_df = df_filtered[(df_filtered['house type'] == selected_house) & (
-            df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
-                                  (df_filtered['square feet'].between(selected_square_feet[0],
-                                                                      selected_square_feet[1])) &
-                                  (df_filtered['price'].between(selected_price_range[0], selected_price_range[1]))
-                                  ]
+        filtered_df = df_filtered[
+            (df_filtered['house type'] == selected_house) &
+            (df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
+            (df_filtered['square feet'].between(selected_square_feet[0], selected_square_feet[1])) &
+            (df_filtered['price'].between(selected_price_range[0], selected_price_range[1])) &
+            (df_filtered['number of bathrooms'].between(selected_bathrooms[0], selected_bathrooms[1]))
+            ]
     elif selected_location != 'All':
-        filtered_df = df_filtered[(df_filtered['location'] == selected_location) & (
-            df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
-                                  (df_filtered['square feet'].between(selected_square_feet[0],
-                                                                      selected_square_feet[1])) &
-                                  (df_filtered['price'].between(selected_price_range[0], selected_price_range[1]))
-                                  ]
+        filtered_df = df_filtered[
+            (df_filtered['location'] == selected_location) &
+            (df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
+            (df_filtered['square feet'].between(selected_square_feet[0], selected_square_feet[1])) &
+            (df_filtered['price'].between(selected_price_range[0], selected_price_range[1])) &
+            (df_filtered['number of bathrooms'].between(selected_bathrooms[0], selected_bathrooms[1]))
+            ]
     else:
-        filtered_df = df_filtered[df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1]) &
-                                  (df_filtered['square feet'].between(selected_square_feet[0],
-                                                                      selected_square_feet[1])) &
-                                  (df_filtered['price'].between(selected_price_range[0], selected_price_range[1]))]
+        filtered_df = df_filtered[
+            (df_filtered['number of rooms'].between(selected_rooms[0], selected_rooms[1])) &
+            (df_filtered['square feet'].between(selected_square_feet[0], selected_square_feet[1])) &
+            (df_filtered['price'].between(selected_price_range[0], selected_price_range[1])) &
+            (df_filtered['number of bathrooms'].between(selected_bathrooms[0], selected_bathrooms[1]))
+            ]
+
 
     df_filtered_display = filtered_df[filtered_df['status'] == 'Approved']
     df_filtered_display = df_filtered_display[df_filtered_display['username'] != logged_in_user]
