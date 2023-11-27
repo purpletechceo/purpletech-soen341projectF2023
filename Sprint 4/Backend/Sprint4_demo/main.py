@@ -178,6 +178,7 @@ if getattr(st.session_state, 'logged_in', False):
                 offer_price = st.text_input("Price to Offer", key="offer_price", value="$")
                 deed_date = st.date_input("Deed of Sale Date", key="deed_date")
                 occupancy_date = st.date_input("Occupancy of Premises Date", key="occupancy_date")
+                sellername = selected_row['username']
 
                 # Create a submit button to save and concatenate data
                 if st.button("Submit"):
@@ -193,7 +194,8 @@ if getattr(st.session_state, 'logged_in', False):
                             'Price Offered': [offer_price],
                             'Deed of Sale Date': [deed_date],
                             'Occupancy Date': [occupancy_date],
-                            'username':[logged_in_user]
+                            'username':[logged_in_user],
+                            'Sellername':[sellername]
                         })
 
                     save_to_csv(purchase_data, "purchaseinfomain.csv")
@@ -208,7 +210,7 @@ if getattr(st.session_state, 'logged_in', False):
             st.write("## Your Requests")
             visits_data = pd.read_csv('visits.csv')
             user_visits = visits_data[visits_data['b_email'] == username]
-            purchase_requests= pd.read_csv('purchaseinfomain.csv')
+            purchase_requests = pd.read_csv('purchaseinfomain.csv')
             purchase_requests = purchase_requests[purchase_requests['username'] == logged_in_user]
 
             st.write("#### Visit Requests:")
@@ -405,7 +407,7 @@ if getattr(st.session_state, 'logged_in', False):
         st.write("## Your Listings:")
 
         listings_df = pd.read_csv('data.csv')
-
+        df = pd.read_csv('data.csv')
 
         listings_df_display = listings_df[listings_df['username']== logged_in_user]
 
@@ -429,7 +431,36 @@ if getattr(st.session_state, 'logged_in', False):
         else:
             st.info("You have not created any listings")
 
+        # Offer Management (Sprint 4)
 
+        dfp = pd.read_csv('purchaseinfomain.csv')
+
+        # Create a copy of the DataFrame with the selected columns
+        p_df_filtered = dfp[
+            ['Broker Name', 'License Number', 'Agency Name', 'Buyer Name', 'Buyer Current Address', 'Buyer Email',
+             'Immovable Address', 'Price Offered', 'Deed of Sale Date', 'Occupancy Date', 'username', 'Sellername']]
+
+        gd = GridOptionsBuilder.from_dataframe(p_df_filtered)
+        gd.configure_selection(selection_mode='single', use_checkbox=True)
+        gd.configure_column('Selername', hide=True)
+        gd.configure_column('username', hide=True)
+        gridoptions = gd.build()
+
+        p_df_filtered_display = p_df_filtered[p_df_filtered['Sellername'] == logged_in_user]
+
+        vistRequests = st.checkbox("Show Requests on your Properties")
+        if vistRequests:
+            grid_table = AgGrid(p_df_filtered_display, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
+                                height=250,
+                                gridOptions=gridoptions, update_mode=GridUpdateMode.SELECTION_CHANGED)
+
+            if grid_table['selected_rows']:
+                p_selected_row = grid_table['selected_rows'][0]
+
+                if st.button("Accept Offer"):
+                    row_num = df[df['house address'] == p_selected_row['Immovable Address']].index[0]
+                    df.at[row_num, 'status'] = "Sold"
+                    df.to_csv('data.csv', index=False)
 
 
         # CRUD operations
