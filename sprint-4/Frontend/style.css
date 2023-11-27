@@ -1,0 +1,23 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ gmp-map {
+    height: 100%;
+    margin-left: 0;
+  }
+  .map-container {
+  height: 60%; /* Reduce the height as needed */
+  width: 40%; /* Reduce the width as needed */
+  margin-left: 20%;
+  position: absolute;
+  top: 25%; /* Adjust the top position to leave space for the navigation bar */
+  left: 30%; /* Adjust the left position to center the map horizontally */
+  z-index: 1; /* Set a higher z-index value to bring it to the front */
+  background-color: rgba(255, 255, 255, 0.7); /* Add a white background with transparency to the map container */
+}
+  /* Optional: Makes the sample page fill the window. */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

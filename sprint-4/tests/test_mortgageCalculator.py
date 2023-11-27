@@ -1,5 +1,5 @@
 import unittest
-from mortgageCalculator import calculate_mortgage
+from Sprint 4.mortgageCalculator import calculate_mortgage
 
 class TestMortgageCalculator(unittest.TestCase):
 
