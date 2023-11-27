@@ -32,8 +32,8 @@ body {
 }
 
 nav {
-  background-image: linear-gradient(to left, rgb(122, 108, 126), #998d9c, #b4a7b7);
-  background-color:  rgba(167, 153, 183, 1);
+  background-image: linear-gradient(to left, rgb(100, 55, 112), #6d3977, #9668a0);
+  background-color:  rgb(51, 41, 63);
   color: #fff;
   display: flex;
   align-items: center;
