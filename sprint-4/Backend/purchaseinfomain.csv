@@ -1,4 +1,4 @@
-Broker Name,License Number,Agency Name,Buyer Name,Buyer Current Address,Buyer Email,Immovable Address,Price Offered,Deed of Sale Date,Occupancy Date,Sellername,Offer Status
+Broker Name,License Number,Agency Name,Buyer Name,Buyer Current Address,Buyer Email,Immovable Address,Price Offered,Deed of Sale Date,Occupancy Date,userername,Offer Status
 broker1,123456,ABC Realty,John Doe,123 Main St,john.doe@example.com,House 1,500000,2023-12-15,2023-12-20,user1,Accepted
 broker2,789012,XYZ Properties,Jane Smith,456 Elm St,jane.smith@example.com,House 2,550000,2023-12-18,2023-12-25,user2,Pending
 broker2,789012,XYZ Properties,Michael Johnson,789 Oak St,michael.j@example.com,House 3,600000,2023-12-20,2023-12-28,user2,Pending
