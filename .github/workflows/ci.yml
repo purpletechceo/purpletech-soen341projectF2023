@@ -35,6 +35,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Step 4: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/test_initial.py'
-      - name: Run pytest on test_initial.py
+      # Step 4: Run pytest on the test files
+      - name: Run pytest on the contents of the tests folder
         run: pytest "sprint-4/tests/"
