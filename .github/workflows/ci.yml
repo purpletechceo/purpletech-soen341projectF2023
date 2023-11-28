@@ -37,4 +37,4 @@ jobs:
 
       # Step 4: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/test_initial.py'
       - name: Run pytest on test_initial.py
-        run: pytest "sprint-4/tests/
+        run: pytest "sprint-4/tests/"
