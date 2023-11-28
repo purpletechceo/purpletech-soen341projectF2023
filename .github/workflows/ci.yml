@@ -37,12 +37,4 @@ jobs:
 
       # Step 4: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/test_initial.py'
       - name: Run pytest on test_initial.py
-        run: pytest "Sprint 2/Implemented Features/Backend/test_initial.py"
-
-      # Commented Step 5: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/broker_visits.py'
-      # - name: Run pytest on test_broker_visits.py
-      # run: pytest "Sprint 2/Implemented Features/Backend/test_broker_visits.py"
-
-      # Commented Step 6: Run pytest on the specified test file 'Sprint 2/Implemented Features/Backend/test_house_filtering.py'
-      # - name: Run pytest on test_house_filtering.py
-      # run: pytest "Sprint 2/Implemented Features/Backend/test_house_filtering.py"
+        run: pytest "sprint-4/tests/
