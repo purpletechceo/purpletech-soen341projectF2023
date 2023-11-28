@@ -31,14 +31,10 @@ jobs:
     # Specify the operating systems to run this job (All platforms: Linux, macOS, Windows)
     runs-on: ${{ matrix.os }}
 
-    # Define a strategy for running this job on different platforms
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-
     # Define a strategy for running this job with different Python versions
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: [3.7, 3.8, 3.9, 3.10]
 
     # Define the individual steps to be executed as part of this job
@@ -52,3 +48,5 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      # You can add other continuous integration steps here
