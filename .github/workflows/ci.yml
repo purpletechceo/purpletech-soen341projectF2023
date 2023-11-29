@@ -18,17 +18,22 @@ jobs:
 
     # Define the individual steps to be executed as part of this job
     steps:
-      # Step 1: Install project dependencies listed in 'requirements.txt' using 'pip install'
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      # Step 1: Checkout code (if required)
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      # Step 2: Run pytest on the test files
+      # Step 2: Install project dependencies listed in 'requirements.txt' using 'pip install'
+      - name: Install dependencies
+        run: pip install -r /path/to/requirements.txt  # Replace with the correct path to requirements.txt
+
+      # Step 3: Run pytest on the test files
       - name: Run pytest on the contents of the tests folder
         run: pytest "sprint-4/tests/"
 
   continuous-integration:
     # Specify the operating system to run this job (Windows)
     runs-on: windows-latest
+
     # Define a strategy for running this job with different Python versions
     strategy:
       matrix:
@@ -37,13 +42,14 @@ jobs:
     # Define the individual steps to be executed as part of this job
     steps:
       # Additional steps for the continuous integration process
-      - name: Checkout code
+      - name: Checkout code (if required)
         uses: actions/checkout@v2
 
       - name: Update pip
         run: python -m pip install --upgrade pip
 
+      # Install project dependencies listed in 'requirements.txt' using 'pip install'
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r /path/to/requirements.txt  # Replace with the correct path to requirements.txt
 
       # You can add other continuous integration steps here
