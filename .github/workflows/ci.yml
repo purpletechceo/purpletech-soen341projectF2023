@@ -23,7 +23,11 @@ jobs:
 
     # Define the individual steps to be executed as part of this job
     steps:
-      # Step 1: Run pytest on the test files
+      # Step 1: Install pytest
+      - name: Install pytest
+        run: pip install pytest
+
+      # Step 2: Run pytest on the test files
       - name: Run pytest on the contents of the tests folder
         run: pytest "sprint-4/tests/"
 
