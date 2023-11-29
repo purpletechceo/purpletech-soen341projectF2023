@@ -23,11 +23,15 @@ jobs:
 
     # Define the individual steps to be executed as part of this job
     steps:
-      # Step 1: Install project dependencies listed in 'requirements.txt' using 'pip install'
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Install project dependencies listed in 'requirements.txt' using 'pip install'
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Step 2: Run pytest on the test files
+      # Step 3: Run pytest on the test files
       - name: Run pytest on the contents of the tests folder
         run: pytest "sprint-4/tests/"
 
@@ -50,6 +54,7 @@ jobs:
       - name: Update pip
         run: python -m pip install --upgrade pip
 
+      # Install project dependencies listed in 'requirements.txt' using 'pip install'
       - name: Install dependencies
         run: pip install -r requirements.txt
 
