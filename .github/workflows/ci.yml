@@ -23,9 +23,9 @@ jobs:
 
     # Define the individual steps to be executed as part of this job
     steps:
-      # Step 1: Install pytest
-      - name: Install pytest
-        run: pip install pytest
+      # Step 1: Install project dependencies listed in 'requirements.txt' using 'pip install'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       # Step 2: Run pytest on the test files
       - name: Run pytest on the contents of the tests folder
