@@ -13,36 +13,25 @@ on:
 # Define the jobs that this workflow consists of
 jobs:
   pre-hook:
-    # Specify the operating systems to run this job (All platforms: Linux, macOS, Windows)
-    runs-on: ${{ matrix.os }}
-
-    # Define a strategy for running this job on different platforms
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+    # Specify the operating system to run this job (Windows)
+    runs-on: windows-latest
 
     # Define the individual steps to be executed as part of this job
     steps:
-      # Step 1: Checkout code
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Step 2: Install project dependencies listed in 'requirements.txt' using 'pip install'
+      # Step 1: Install project dependencies listed in 'requirements.txt' using 'pip install'
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      # Step 3: Run pytest on the test files
+      # Step 2: Run pytest on the test files
       - name: Run pytest on the contents of the tests folder
         run: pytest "sprint-4/tests/"
 
   continuous-integration:
-    # Specify the operating systems to run this job (All platforms: Linux, macOS, Windows)
-    runs-on: ${{ matrix.os }}
-
+    # Specify the operating system to run this job (Windows)
+    runs-on: windows-latest
     # Define a strategy for running this job with different Python versions
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
         python-version: [3.7, 3.8, 3.9, 3.10]
 
     # Define the individual steps to be executed as part of this job
@@ -54,7 +43,6 @@ jobs:
       - name: Update pip
         run: python -m pip install --upgrade pip
 
-      # Install project dependencies listed in 'requirements.txt' using 'pip install'
       - name: Install dependencies
         run: pip install -r requirements.txt
 
