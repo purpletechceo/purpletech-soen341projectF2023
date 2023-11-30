@@ -1,6 +1,6 @@
 house address,house type,number of rooms,number of bathrooms,image,username,status,location,price,square feet
 House 1,Townhouse,6,2,https://eastwood.nyc3.cdn.digitaloceanspaces.com/blogs/Screenshot%202023-05-26%20at%2011.30.03%20AM.png,broker1,Approved,Montreal,500000,2500
-House 2,Split Level,6,9,https://simpleshowing.ghost.io/content/images/2023/01/GetMedia-1.jpeg,broker2,Sold to broker2,Ottawa,700000,3200
+House 2,Split Level,6,9,https://simpleshowing.ghost.io/content/images/2023/01/GetMedia-1.jpeg,broker2,Sold to broker1,Ottawa,700000,3200
 House 3,Castle,20,5,https://cdn.elebase.io/173fe953-8a63-4a8a-8ca3-1bacb56d78a5/0bedd64c-5bbb-4995-83d3-32de407ea82d-oldcastle2_luboluzina.jpg?w=1000&h=500&fit=crop&q=75,broker2,Approved,Toronto,2000000,10000
 23 Marsh Rd,Split Level,4,2,https://housing.com/news/wp-content/uploads/2022/11/shutterstock_1715891752-1200x700-compressed.jpg,broker1,Approved,Montreal,400000,1800
 55 Cook Ave,House,3,1,"https://res.cloudinary.com/brickandbatten/images/f_auto,q_auto/v1675439478/wordpress_assets/SmallHouseExteriors-Twitter-card-B-LOGO/SmallHouseExteriors-Twitter-card-B-LOGO.jpg?_i=AA",broker1,Approved,Ottawa,300000,1500
