@@ -115,7 +115,7 @@ if vistRequests:
     if grid_table['selected_rows']:
         p_selected_row = grid_table['selected_rows'][0]
 
-        st.write(dfp[dfp['Buyer Name'] == p_selected_row['Buyer Name']].index[0])
+        #st.write(dfp[dfp['Buyer Name'] == p_selected_row['Buyer Name']].index[0])
 
         if p_selected_row['Offer Status'] == 'Pending':
 
