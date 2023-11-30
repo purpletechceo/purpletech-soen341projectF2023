@@ -1,0 +1,17 @@
+house address,house type,number of rooms,number of bathrooms,image,username,status,location,price,square feet
+House 1,Townhouse,6,2,https://eastwood.nyc3.cdn.digitaloceanspaces.com/blogs/Screenshot%202023-05-26%20at%2011.30.03%20AM.png,broker1,Approved,Montreal,500000,2500
+House 2,Split Level,6,9,https://simpleshowing.ghost.io/content/images/2023/01/GetMedia-1.jpeg,broker2,Sold to broker2,Ottawa,700000,3200
+House 3,Castle,20,5,https://cdn.elebase.io/173fe953-8a63-4a8a-8ca3-1bacb56d78a5/0bedd64c-5bbb-4995-83d3-32de407ea82d-oldcastle2_luboluzina.jpg?w=1000&h=500&fit=crop&q=75,broker2,Approved,Toronto,2000000,10000
+23 Marsh Rd,Split Level,4,2,https://housing.com/news/wp-content/uploads/2022/11/shutterstock_1715891752-1200x700-compressed.jpg,broker1,Approved,Montreal,400000,1800
+55 Cook Ave,House,3,1,"https://res.cloudinary.com/brickandbatten/images/f_auto,q_auto/v1675439478/wordpress_assets/SmallHouseExteriors-Twitter-card-B-LOGO/SmallHouseExteriors-Twitter-card-B-LOGO.jpg?_i=AA",broker1,Approved,Ottawa,300000,1500
+98 Bairstow Blvd,Townhouse,6,2,https://cf.bstatic.com/xdata/images/hotel/max1024x768/385164810.jpg?k=97a2835dd64c2990e56540b277ab6131b30cbf4a537336c3760f9aaf2f63af40&o=&hp=1,broker1,Approved,Quebec City,550000,2600
+44 Trent Rd,Apartment,2,1,https://www.apartments.com/blog/sites/default/files/styles/x_large_hq/public/image/2023-06/ParkLine-apartment-in-Miami-FL.jpg?itok=kQmw64UU,broker1,Approved,Quebec City,250000,1200
+78 Archer Blvd,Townhouse,7,2,https://na.rdcpix.com/90885237/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c303855rd-w832_h468_r4_q80.jpg,broker1,Approved,Laval,600000,2800
+3000 Blvd Guy,Castle,15,5,https://hips.hearstapps.com/hmg-prod/images/bojnice-castle-1603142898.jpg,broker2,Approved,Ottawa,1800000,8000
+2245 Root Ave,Apartment,3,1,https://photos.spotahome.com/pt_640_480/7b187b37b8470fe420750da5978d90b7086087769cd78e01a514ffdc.jpg,broker2,Approved,Toronto,350000,1600
+30 Rabada Rd,House,4,2,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbjuaaTQiKx8UX-rgDoo7ijcv9SykP9qmPkPQ2iOmVKBxRSwRc9QN-rbouCIf9STzf3uA&usqp=CAU,broker2,Approved,Quebec City,450000,2000
+41 Keegan Blvd,Townhouse,6,2,https://cdn-cms.pgimgs.com/static/2020/05/townhouse-malaysia-1-1.jpg,broker2,Approved,Laval,550000,2500
+66 Butler Rd,House,2,1,https://www.bhg.com/thmb/H9VV9JNnKl-H1faFXnPlQfNprYw=/1799x0/filters:no_upscale():strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg,broker3,Pending,Montreal,320000,1200
+57 Dussen Rd,Townhouse,5,1,https://architecturesstyle.b-cdn.net/wp-content/uploads/2020/10/modern-townhouse-design-4.jpg,broker3,Approved,Ottawa,480000,2100
+21 Miller Ave,Castle,12,4,https://www.brides.com/thmb/ZEjmYkTVQh_QR4WtbFQ2X6GHfrc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__brides__proteus__5af9c06d368ea641e4c3a24d__11-75c2514d4c5c4dca921c0f35f2621c86.jpeg,broker3,Approved,Quebec City,1500000,6000
+901 Jansen Ave,Split Level,4,2,https://www.bhg.com/thmb/bLnH7s54YYjZhAgO4fndachF-qg=/1866x0/filters:no_upscale():strip_icc()/tan-house-stone-wooden-door-f20f25ce-0fe5c314d7e1420197e206f9f74aa8d2.jpg,broker3,Approved,Toronto,420000,1800
