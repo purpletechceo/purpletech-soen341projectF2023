@@ -115,12 +115,15 @@ if vistRequests:
     if grid_table['selected_rows']:
         p_selected_row = grid_table['selected_rows'][0]
 
+        st.write(dfp[dfp['Buyer Name'] == p_selected_row['Buyer Name']].index[0])
+
         if p_selected_row['Offer Status'] == 'Pending':
 
             if st.button("Accept Offer"):
                 row_num = df[df['house address'] == p_selected_row['Immovable Address']].index[0]
-                df.at[row_num, 'status'] = f"Sold to {p_selected_row['Broker Name']}"
-                p_row_num = dfp[dfp['Immovable Address'] == p_selected_row['Immovable Address']].index[0]
+                df.at[row_num, 'status'] = f"Sold to {p_selected_row['username']}"
+                p_row_num = dfp[dfp['Buyer Name'] == p_selected_row['Buyer Name']].index[0]
+
                 dfp.at[p_row_num, 'Offer Status'] = "Accepted"
                 df.to_csv('data.csv', index=False)
                 dfp.to_csv('purchaseinfomain.csv', index=False)
