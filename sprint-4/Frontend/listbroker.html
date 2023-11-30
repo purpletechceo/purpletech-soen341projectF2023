@@ -1,3 +1,4 @@
+<<<<<<< HEAD:sprint-4/Frontend/listbroker.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,3 +39,142 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Broker</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        header {
+            padding-top: 10%;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        header.expanded {
+            transform: translateY(-80vh);
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+       
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            z-index: -1;
+            opacity: 0.7;
+        }
+        iframe {
+            display: none;
+            width: 80vw;
+            height: 90vh;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            background: #fff;
+            transition: opacity 5s ease-in-out;
+        }
+        iframe.visible {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 1;
+            transition: opacity 8s ease-in-out;
+        }
+
+        iframe.faded {
+            transition: opacity 2s ease; /* Shorter fade-in transition after the delay */
+        }
+
+        body.expanded iframe {
+            transition: opacity 8s ease-in-out; /* Adjusted duration for the expanded state */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <h1>PurpleTech</h1>
+                </div>
+                <div class="menu-items">
+                    <li><a href="purpletech(demo).html">Home</a></li>
+                    <li><a href="listofproperties.html">Find a Home</a></li>
+                    <li><a href="createlisting.html">Create Listing</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="login.html">login</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+    <button id="toggleButton">Explore Brokers</button>
+</header>
+    <iframe id="brokerFrame" src="http://localhost:8502"></iframe>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var iframe = document.getElementById('brokerFrame');
+        var toggleButton = document.getElementById('toggleButton');
+        var header = document.querySelector('header');
+
+        toggleButton.addEventListener('click', function () {
+            // Toggle the fade-out effect on the header
+            header.classList.toggle('expanded');
+
+            // Toggle the visibility class on the iframe after a delay
+            setTimeout(function () {
+                iframe.classList.toggle('visible');
+            }, 1000); // Adjust the delay as needed (500ms for 0.5 seconds)
+
+            // Toggle the fade-in effect on the iframe after a delay
+            setTimeout(function () {
+                iframe.classList.toggle('faded');
+            }, 2000); // Adjust the delay as needed (1000ms for 1 second)
+        });
+    });
+    </script>
+</body>
+
+</html>
+>>>>>>> minh_goodone:Sprint 4/Frontend/listbroker.html

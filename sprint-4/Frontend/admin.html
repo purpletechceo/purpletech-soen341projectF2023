@@ -5,36 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Broker</title>
+    <title>List Broker Admin</title>
+    <link rel="stylesheet" href="nav.css">
     <style>
-        body {
-            background-image: url("image/loginimage.jpg");
-            background-size: cover; /* Make the background image cover the entire page */
-            background-position: center; /* Center the background image */
-            background-attachment: fixed; /* Fixed background image */
-            margin: 0;
-            padding: 0;
+        .iframe-container {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             height: 100vh;
-            background-color: #f0f0f0; /* Optional background color */
+            margin: 0;
+            position: relative;
+            z-index: 0; /* set the lowest z-index for the iframe-container */
         }
 
         iframe {
-            
-            width: 95%;
-            height: 95%;
-            border: none; /* Remove iframe border */
-            border-radius: 10px; /* Add round border */
-            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.2); /* Add a small shadow */
+            width: 90vh;
+            height: 90vh;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             opacity: 0.9;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background-color: #fff;
+            /* Add a background color */
         }
     </style>
 </head>
 
 <body>
-    <iframe src="http://localhost:8505"></iframe>
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="logo">
+                    <h1>PurpleTech</h1>
+                </div>
+                <div class="menu-items">
+                    <li><a href="purpletech(demo).html">Home</a></li>
+                    <li><a href="listofproperties.html">Find a Home</a></li>
+                    <li><a href="createlisting.html">Create Listing</a></li>
+                    <li><a href="listbroker.html">Broker</a></li>
+                    <li><a href="login.html">login</a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="iframe-container">
+        <iframe src="http://localhost:8505"></iframe>
+    </div>
 </body>
 
 </html>
