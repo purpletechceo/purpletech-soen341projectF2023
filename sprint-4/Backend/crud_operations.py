@@ -6,16 +6,6 @@ from st_aggrid.grid_options_builder import GridOptionsBuilder
 
 #save to csv:
 
-def save_to_csv(data, filename):
-    df = pd.DataFrame(data)
-    if not pd.io.common.file_exists(filename):
-        df.to_csv(filename, index=False)
-    else:
-        existing_data = pd.read_csv(filename)
-        updated_data = pd.concat([existing_data, df], ignore_index=True)
-        updated_data.to_csv(filename, index=False)
-
-
 # Read user data from 'userdata.csv' file
 user_data = pd.read_csv('userdata.csv')
 
@@ -85,15 +75,62 @@ if not listings_df_display.empty:
             st.image(selected_row['image'], caption='Selected Image', use_column_width=True)
 
         with description_column:
-            st.write(f"House Address: {selected_row['house address']}\n"
-                     f"\nHouse Type: {selected_row['house type']}\n"
-                     f"\nNumber of Rooms: {selected_row['number of rooms']}\n"
-                     f"\nNumber of Bathrooms: {selected_row['number of bathrooms']}")
+            if selected_row['status'] == 'Approved' or 'Pending':
+                st.write(f"House Address: {selected_row['house address']}\n"
+                         f"\nHouse Type: {selected_row['house type']}\n"
+                         f"\nNumber of Rooms: {selected_row['number of rooms']}\n"
+                         f"\nNumber of Bathrooms: {selected_row['number of bathrooms']}")
+            else:
+                st.write(f"House Address: {selected_row['house address']}\n"
+                         f"\nHouse Type: {selected_row['house type']}\n"
+                         f"\nNumber of Rooms: {selected_row['number of rooms']}\n"
+                         f"\nNumber of Bathrooms: {selected_row['number of bathrooms']}\n"
+                         f"\nThis property has been {selected_row['status']}")
+
+
 else:
     st.info("You have not created any listings")
 
+# Offer Management (Sprint 4)
 
+dfp = pd.read_csv('purchaseinfomain.csv')
 
+# Create a copy of the DataFrame with the selected columns
+p_df_filtered = dfp[
+    ['Broker Name', 'License Number', 'Agency Name', 'Buyer Name', 'Buyer Current Address', 'Buyer Email',
+     'Immovable Address', 'Price Offered', 'Deed of Sale Date', 'Occupancy Date', 'username', 'Offer Status']]
+
+gd = GridOptionsBuilder.from_dataframe(p_df_filtered)
+gd.configure_selection(selection_mode='single', use_checkbox=True)
+gridoptions = gd.build()
+
+p_df_filtered_display = p_df_filtered[p_df_filtered['Broker Name'] == logged_in_user]
+
+vistRequests = st.checkbox("Show Requests on your Properties")
+if vistRequests:
+    grid_table = AgGrid(p_df_filtered_display, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
+                        height=250,
+                        gridOptions=gridoptions, update_mode=GridUpdateMode.SELECTION_CHANGED)
+
+    if grid_table['selected_rows']:
+        p_selected_row = grid_table['selected_rows'][0]
+
+        if p_selected_row['Offer Status'] == 'Pending':
+
+            if st.button("Accept Offer"):
+                row_num = df[df['house address'] == p_selected_row['Immovable Address']].index[0]
+                df.at[row_num, 'status'] = f"Sold to {p_selected_row['Broker Name']}"
+                p_row_num = dfp[dfp['Immovable Address'] == p_selected_row['Immovable Address']].index[0]
+                dfp.at[p_row_num, 'Offer Status'] = "Accepted"
+                df.to_csv('data.csv', index=False)
+                dfp.to_csv('purchaseinfomain.csv', index=False)
+                st.success("Property Sold!")
+
+            if st.button("Reject Offer"):
+                p_row_num = dfp[dfp['Immovable Address'] == p_selected_row['Immovable Address']].index[0]
+                dfp.at[p_row_num, 'Offer Status'] = "Rejected"
+                dfp.to_csv('purchaseinfomain.csv', index=False)
+                st.success("Purchase Request Rejected")
 
 # CRUD operations
 
@@ -107,6 +144,8 @@ new_num_rooms = st.text_input("Number of Rooms")
 new_num_bathrooms = st.text_input("Number of Bathrooms")
 new_image = st.text_input("Image URL")
 new_location = st.text_input("Location")
+new_sqf = st.text_input("Square Feet")
+new_price = st.text_input("Price")
 if st.button("Add New Row"):
     # Store the logged-in username in the 'username' column
     new_row = pd.DataFrame([{
@@ -116,8 +155,10 @@ if st.button("Add New Row"):
         'number of bathrooms': new_num_bathrooms,
         'image': new_image,
         'username': logged_in_user,
+        'status': 'Pending',
         'location': new_location,
-        'status': 'Pending'
+        'price': new_price,
+        'location': new_location
     }])
     df = pd.concat([df, new_row], ignore_index=True)
     df.to_csv('data.csv', index=False)
@@ -132,12 +173,22 @@ if df.at[row_to_update, 'username'] == logged_in_user:  # Check if the user crea
     update_num_bathrooms = st.text_input("Number of Bathrooms",
                                          value=df.at[row_to_update, 'number of bathrooms'])
     update_image = st.text_input("Image URL", value=df.at[row_to_update, 'image'])
+    update_location = st.text_input("location", value=df.at[row_to_update, 'location'])
+    update_price= st.text_input("price", value=df.at[row_to_update, 'price'])
+    update_squareFeet = st.text_input("square feet", value=df.at[row_to_update, 'square feet'])
     if st.button("Update Row"):
         df.at[row_to_update, 'house address'] = update_house_address
         df.at[row_to_update, 'house type'] = update_house_type
         df.at[row_to_update, 'number of rooms'] = update_num_rooms
         df.at[row_to_update, 'number of bathrooms'] = update_num_bathrooms
         df.at[row_to_update, 'image'] = update_image
+        df.at[row_to_update, 'status'] = 'Pending'
+        df.at[row_to_update, 'location'] = update_location
+        df.at[row_to_update, 'price'] = update_price
+        df.at[row_to_update, 'square feet'] = update_squareFeet
+
+
+
         df.to_csv('data.csv', index=False)
 
 
